@@ -2,7 +2,7 @@
 
 
 <nav class="nav-sidebar left-company-list col-md-3">
-    <a class="btn btn-default btn-sm" href="${pageContext.request.contextPath}/add-company"
+    <a class="btn btn-default btn-sm" href="${pageContext.request.contextPath}/carrier/add-company"
        style="margin-top: 5px;margin-bottom: 10px;">Добавить компанию</a>
 
     <table class="table table-striped">

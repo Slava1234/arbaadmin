@@ -4,11 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 import ru.arbaadmin.dao.carrier.CarrierCompanyDao;
 import ru.arbaadmin.dao.carrier.CarrierOrderDao;
+import ru.arbaadmin.model.carrier.CarrierCompany;
+import ru.arbaadmin.model.carrier.CarrierOrder;
+
+import java.util.List;
 
 @Controller
-public class CustomerController {
+public class CarrierController {
 
 
     private CarrierCompanyDao companyServiceImpl;
@@ -28,12 +33,12 @@ public class CustomerController {
     }
 
 
-    @RequestMapping(value = "/customer", method = RequestMethod.GET)
+    @RequestMapping(value = "/currier", method = RequestMethod.GET)
     public String index() {
-        return "arbaadmin/customer/index";
+        return "arbaadmin/carrier/index";
     }
 
-    /*@RequestMapping(value = "/company", method = RequestMethod.GET)
+    @RequestMapping(value = "/company", method = RequestMethod.GET)
     public ModelAndView company() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("arbaadmin/customer/index");
@@ -41,7 +46,7 @@ public class CustomerController {
         //Company company = this.companyServiceImpl.getCompanyById(1);
         // modelAndView.addObject("company", company);
 
-        List<Company> companies = this.companyServiceImpl.listCompany();
+        List<CarrierCompany> companies = this.companyServiceImpl.listCompany();
 
         modelAndView.addObject("companies", companies);
 
@@ -52,9 +57,9 @@ public class CustomerController {
     @RequestMapping(value = "/company/{id}", method = RequestMethod.GET)
     public ModelAndView companyOrders(@PathVariable("id") int id) {
 
-        List<Order> orders = this.orderServiceImpl.listOrderById(id);
-        Company company = this.companyServiceImpl.getCompanyById(id);
-        List<Company> companies = this.companyServiceImpl.listCompany();
+        List<CarrierOrder> orders = this.orderServiceImpl.listOrderById(id);
+        CarrierCompany company = this.companyServiceImpl.getCompanyById(id);
+        List<CarrierCompany> companies = this.companyServiceImpl.listCompany();
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("arbaadmin/customer/company");
@@ -73,7 +78,7 @@ public class CustomerController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("arbaadmin/customer/add_order");
 
-        Company company = this.companyServiceImpl.getCompanyById(id);
+        CarrierCompany company = this.companyServiceImpl.getCompanyById(id);
         // todo fix this trash
         company.setToNullOrders();
         // todo is this worth ? could get the company name by javascript (btw)
@@ -96,22 +101,17 @@ public class CustomerController {
             @RequestParam(value = "km", required = false) String km,
             @RequestParam(value = "departure_date", required = false) String departure_date,
             @RequestParam(value = "delivery_date", required = false) String delivery_date,
-            @RequestParam(value = "driver_full_name", required = false) String driver_full_name,
             @RequestParam(value = "gps", required = false) String gps,
-            @RequestParam(value = "driver_phone", required = false) String driver_phone,
-            @RequestParam(value = "vehicle_type1", required = false) String vehicle_type1,
-            @RequestParam(value = "car_number", required = false) String car_number,
             @RequestParam(value = "cost_of_transportation", required = false) String cost_of_transportation,
             @RequestParam(value = "currency", required = false) String currency,
             @RequestParam(value = "payment_method", required = false) String payment_method,
             @RequestParam(value = "loading_method", required = false) String loading_method,
             @RequestParam(value = "type_of_transport", required = false) String type_of_transport,
-            @RequestParam(value = "carrier_price", required = false) String carrier_price,
             @RequestParam(value = "percentage_of_round_trip", required = false) String percentage_of_round_trip
     ) {
 
 
-        Order order = new Order();
+        CarrierOrder order = new CarrierOrder();
         order.setDirection_from(direction_from);
         order.setDirection_to(direction_to);
         order.setRequest_status(request_status);
@@ -122,20 +122,15 @@ public class CustomerController {
         order.setKm(km);
         order.setDeparture_date(departure_date);
         order.setDelivery_date(delivery_date);
-        order.setDriver_full_name(driver_full_name);
         order.setGps(gps);
-        order.setDriver_phone(driver_phone);
-        order.setBrand_of_machine(vehicle_type1);
-        order.setCar_number(car_number);
         order.setCost_of_transportation(cost_of_transportation);
         order.setCurrency(currency);
         order.setPayment_method(payment_method);
         order.setLoading_method(loading_method);
         order.setType_of_transport(type_of_transport);
-        order.setCarrier_price(carrier_price);
         order.setPercentage_of_round_trip(percentage_of_round_trip);
 
-        Company company = this.companyServiceImpl.getCompanyById(company_id);
+        CarrierCompany company = this.companyServiceImpl.getCompanyById(company_id);
         order.setCompanies(company);
 
 
@@ -143,19 +138,6 @@ public class CustomerController {
 
         return "true";
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -175,22 +157,17 @@ public class CustomerController {
             @RequestParam(value = "km", required = false) String km,
             @RequestParam(value = "departure_date", required = false) String departure_date,
             @RequestParam(value = "delivery_date", required = false) String delivery_date,
-            @RequestParam(value = "driver_full_name", required = false) String driver_full_name,
             @RequestParam(value = "gps", required = false) String gps,
-            @RequestParam(value = "driver_phone", required = false) String driver_phone,
-            @RequestParam(value = "vehicle_type1", required = false) String vehicle_type1,
-            @RequestParam(value = "car_number", required = false) String car_number,
             @RequestParam(value = "cost_of_transportation", required = false) String cost_of_transportation,
             @RequestParam(value = "currency", required = false) String currency,
             @RequestParam(value = "payment_method", required = false) String payment_method,
             @RequestParam(value = "loading_method", required = false) String loading_method,
             @RequestParam(value = "type_of_transport", required = false) String type_of_transport,
-            @RequestParam(value = "carrier_price", required = false) String carrier_price,
             @RequestParam(value = "percentage_of_round_trip", required = false) String percentage_of_round_trip
     ) {
 
 
-        Order order = new Order();
+        CarrierOrder order = new CarrierOrder();
         order.setId(order_id);
         order.setDirection_from(direction_from);
         order.setDirection_to(direction_to);
@@ -202,20 +179,15 @@ public class CustomerController {
         order.setKm(km);
         order.setDeparture_date(departure_date);
         order.setDelivery_date(delivery_date);
-        order.setDriver_full_name(driver_full_name);
         order.setGps(gps);
-        order.setDriver_phone(driver_phone);
-        order.setBrand_of_machine(vehicle_type1);
-        order.setCar_number(car_number);
         order.setCost_of_transportation(cost_of_transportation);
         order.setCurrency(currency);
         order.setPayment_method(payment_method);
         order.setLoading_method(loading_method);
         order.setType_of_transport(type_of_transport);
-        order.setCarrier_price(carrier_price);
         order.setPercentage_of_round_trip(percentage_of_round_trip);
 
-        Company company = this.companyServiceImpl.getCompanyById(company_id);
+        CarrierCompany company = this.companyServiceImpl.getCompanyById(company_id);
         order.setCompanies(company);
 
         this.orderServiceImpl.updateOrder(order);
@@ -225,8 +197,8 @@ public class CustomerController {
 
     @RequestMapping(value = "/ajax-get-order", method = RequestMethod.POST)
     @ResponseBody
-    public Order ajaxGetOrder(@RequestParam("orderId") Integer id) {
-        Order order = this.orderServiceImpl.getOrderById(id);
+    public CarrierOrder ajaxGetOrder(@RequestParam("orderId") Integer id) {
+        CarrierOrder order = this.orderServiceImpl.getOrderById(id);
         order.setCompanies(null);
         return order;
     }
@@ -250,15 +222,15 @@ public class CustomerController {
     }
 
     @RequestMapping(value = "/add-company-post", method = RequestMethod.POST)
-    public String addNewCompanyPost(@ModelAttribute("Company") Company company) {
+    public String addNewCompanyPost(@ModelAttribute("Company") CarrierCompany company) {
         this.companyServiceImpl.addCompany(company);
         return "redirect:/";
     }
 
     @RequestMapping(value = "/ajax_get_company", method = RequestMethod.POST)
     @ResponseBody
-    public Company ajaxGetCompany(@RequestParam(value = "id") int id) {
-        Company company = this.companyServiceImpl.getCompanyById(id);
+    public CarrierCompany ajaxGetCompany(@RequestParam(value = "id") int id) {
+        CarrierCompany company = this.companyServiceImpl.getCompanyById(id);
         company.setToNullOrders();
 
         return company;
@@ -279,7 +251,7 @@ public class CustomerController {
     ) {
 
 
-        Company company = new Company();
+        CarrierCompany company = new CarrierCompany();
         company.setId(id);
         company.setCompany_name(view_company_name);
         company.setCompany_city(view_company_city);
@@ -302,6 +274,9 @@ public class CustomerController {
     }
 
 
+    /**
+     * Testing purpose
+     */
     private class Test {
         private String name;
         private String age;
@@ -309,7 +284,6 @@ public class CustomerController {
 
 
     }
-
 
     @RequestMapping(value = "/test", method = RequestMethod.POST, headers="Accept=application/json")
     @ResponseBody
@@ -319,7 +293,7 @@ public class CustomerController {
     }
 
 
-*/
+
 }
 
 

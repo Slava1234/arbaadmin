@@ -15,8 +15,6 @@
 
 
     <style>
-
-
         .left-company-list {
             height: 80%;
             overflow: auto;
@@ -24,17 +22,13 @@
             border: 1px solid #e3e3e3;
             border-radius: 3px;
         }
-
         .orders-box {
 
         }
-
         .badge {
             float: right;
         }
     </style>
-
-
 </head>
 <body>
 
@@ -51,11 +45,8 @@
 
 
     <div class="row col-md-12">
-
-
+        <!-- INCLUDE LEFT SIDEBAR -->
         <%@ include file="./parts/left-sidebar.jsp" %>
-
-
     </div>
 
 </div>

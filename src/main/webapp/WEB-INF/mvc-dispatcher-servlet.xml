@@ -46,11 +46,11 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
             <list>
-                <value>ru.arbaadmin.model.currier.Company</value>
-                <value>ru.arbaadmin.model.currier.Order</value>
+                <value>ru.arbaadmin.model.carrier.CarrierCompany</value>
+                <value>ru.arbaadmin.model.carrier.CarrierOrder</value>
 
-                <value>ru.arbaadmin.model.customer.Company</value>
-                <value>ru.arbaadmin.model.customer.Order</value>
+                <value>ru.arbaadmin.model.customer.CustomerCompany</value>
+                <value>ru.arbaadmin.model.customer.CustomerOrder</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -64,39 +64,39 @@
 
 
     <!-- Customer Company injection -->
-    <bean id="customerCompanyDao" class="ru.arbaadmin.dao.customer.CompanyImpl">
+    <bean id="customerCompanyDao" class="ru.arbaadmin.dao.customer.CustomerCompanyImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
 
-    <bean id="customerCompanyServiceImpl" class="ru.arbaadmin.service.customer.CompanyServiceImpl">
+    <bean id="customerCompanyServiceImpl" class="ru.arbaadmin.service.customer.CustomerCompanyServiceImpl">
         <property name="companyDao" ref="customerCompanyDao"/>
     </bean>
 
     <!-- Currier Order injection -->
-    <bean id="customerOrderDao" class="ru.arbaadmin.dao.customer.OrderImpl">
+    <bean id="customerOrderDao" class="ru.arbaadmin.dao.customer.CustomerOrderImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
 
-    <bean id="customerOrderServiceImpl" class="ru.arbaadmin.service.customer.OrderServiceImpl">
+    <bean id="customerOrderServiceImpl" class="ru.arbaadmin.service.customer.CustomerOrderServiceImpl">
         <property name="orderDao" ref="customerOrderDao"/>
     </bean>
 
 
     <!-- Currier Company injection -->
-    <bean id="carrierCompanyDao" class="ru.arbaadmin.dao.currier.CompanyImpl">
+    <bean id="carrierCompanyDao" class="ru.arbaadmin.dao.carrier.CarrierCompanyImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
 
-    <bean id="carrierCompanyServiceImpl" class="ru.arbaadmin.service.currier.CompanyServiceImpl">
+    <bean id="carrierCompanyServiceImpl" class="ru.arbaadmin.service.carrier.CarrierCompanyServiceImpl">
         <property name="companyDao" ref="carrierCompanyDao"/>
     </bean>
 
     <!-- Customer Order injection -->
-    <bean id="carrierOrderDao" class="ru.arbaadmin.dao.currier.OrderImpl">
+    <bean id="carrierOrderDao" class="ru.arbaadmin.dao.carrier.CarrierOrderImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
 
-    <bean id="currierOrderServiceImpl" class="ru.arbaadmin.service.currier.OrderServiceImpl">
+    <bean id="currierOrderServiceImpl" class="ru.arbaadmin.service.carrier.CarrierOrderServiceImpl">
         <property name="orderDao" ref="carrierOrderDao"/>
     </bean>
 

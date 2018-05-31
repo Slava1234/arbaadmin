@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <title>Компании и заявки</title>
 
-
     <style>
         .left-company-list {
             height: 80%;
@@ -42,7 +41,6 @@
     </div>
 
     <h2>Перевозчик</h2>
-
 
     <div class="row col-md-12">
         <!-- INCLUDE LEFT SIDEBAR -->
