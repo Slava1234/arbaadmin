@@ -307,6 +307,9 @@ $(function () {
      *  *****************************************
      */
 
+    //var serverAddress = "https://lotmaster.kz:8181/arbaadmin/";
+    var serverAddress = "http://localhost:8080/arbaadmin/";
+
     // view company info
 
     $('.view-company-btn').click(function () {
@@ -325,14 +328,13 @@ $(function () {
 
         $.ajax({
             // todo check this url
-            url: 'http://localhost:8080/arbaadmin/ajax_get_company',
+            url: serverAddress+'ajax_get_company',
             type: 'POST',
             data: {
                 id: id
             },
             success: function (response) {
                 console.log(response.company_name);
-                console.log("su");
 
                 var modal = $('#companyInfo');
                 modal.find("input[name='view_company_id']").val(response.id);
@@ -369,11 +371,10 @@ $(function () {
         var view_site = modal.find("input[name='view_site']").val();
         var view_bin_iin = modal.find("input[name='view_bin_iin']").val();
 
-        var localLocationURL = locationURL;
 
         if ($(this).hasClass("ready_to_update_company")) {
             $.ajax({
-                url: localLocationURL + 'ajax_update_company',
+                url: serverAddress + 'ajax_update_company',
                 type: 'POST',
                 data: {
                     id: id,
@@ -420,7 +421,7 @@ $(function () {
         $('.view-company-delete-no').trigger('click');
 
         $.ajax({
-            url: locationURL + '/ajax_delete_company',
+            url: serverAddress + '/ajax_delete_company',
             type: 'POST',
             data: {
                 id: id
@@ -511,7 +512,7 @@ $(function () {
 
         $.ajax({
             // todo fix this to url independent structure
-            url: 'http://localhost:8080/arbaadmin/ajax-get-order',
+            url: serverAddress+'ajax-get-order',
             type: 'POST',
             data: {
                 orderId: orderId
@@ -810,7 +811,7 @@ $(function () {
 
         $.ajax({
             // todo fix this to url independent structure
-            url: 'http://localhost:8080/arbaadmin/update-order',
+            url: serverAddress+ 'update-order',
             type: 'POST',
             data: {
                 order_id: id,
@@ -864,7 +865,7 @@ $(function () {
 
         $.ajax({
             // todo fix this to url independent structure
-            url: 'http://localhost:8080/arbaadmin/ajax-delete-order',
+            url: serverAddress+'ajax-delete-order',
             type: 'POST',
             data: {
                 id: orderIdToDelete
@@ -911,7 +912,7 @@ $(function () {
 
         $.ajax({
             // todo fix this to url independent structure
-            url: 'http://localhost:8080/arbaadmin/add-new-order',
+            url: serverAddress+'add-new-order',
             type: 'POST',
             data: {
                 company_id: company_id,
@@ -949,6 +950,51 @@ $(function () {
             }
         });
     });
+
+
+
+
+
+
+
+    var test = {
+        name: "simon",
+        age: "23"
+    };
+
+    /*$.ajax({
+        // todo check this url
+        url: 'http://localhost:8080/arbaadmin/test',
+        contentType: "application/json; charset=utf-8",
+        type: 'POST',
+        processData:false,
+        cache: false,
+        async: false,
+        data: {
+            test: JSON.stringify(test)
+        },
+        success: function (response) {
+            console.log(response.name);
+
+        },
+        error: function (error) {
+            console.log("error! " + error);
+        }
+    });*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 });
