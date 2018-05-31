@@ -1,6 +1,6 @@
 package ru.arbaadmin.dao.customer;
 
-import ru.arbaadmin.model.currier.Company;
+import ru.arbaadmin.model.customer.Company;
 
 import java.util.List;
 

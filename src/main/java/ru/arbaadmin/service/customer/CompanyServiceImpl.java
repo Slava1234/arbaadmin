@@ -2,8 +2,8 @@ package ru.arbaadmin.service.customer;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.arbaadmin.dao.currier.CompanyDao;
-import ru.arbaadmin.model.currier.Company;
+import ru.arbaadmin.dao.customer.CompanyDao;
+import ru.arbaadmin.model.customer.Company;
 
 import java.util.List;
 

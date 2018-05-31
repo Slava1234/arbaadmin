@@ -6,38 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="120798c4-b6c1-4392-85cd-0477d6f8e725" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/customer/CompanyDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/customer/CompanyImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/customer/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/customer/OrderImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer/Company.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/service/customer/CompanyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/service/customer/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CurrierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CurrierController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/CompanyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/currier/CompanyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/CompanyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/currier/CompanyImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/currier/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/OrderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/currier/OrderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/ArbaadminAll.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/currier/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/currier/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/service/CompanyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/service/currier/CompanyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/service/currier/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/classes/ru/arbaadmin/controllers/CurrierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/classes/ru/arbaadmin/controllers/CurrierController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/carrier/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/carrier/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/customer/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/customer/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/arbaadmin/controllers/CurrierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/arbaadmin/controllers/CurrierController.class" afterDir="false" />
-    </list>
+    <list default="true" id="120798c4-b6c1-4392-85cd-0477d6f8e725" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,8 +35,8 @@
       <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="79" column="81" lean-forward="true" selection-start-line="79" selection-start-column="81" selection-end-line="79" selection-end-column="81" />
+            <state relative-caret-position="405">
+              <caret line="74" column="36" lean-forward="true" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -234,7 +203,7 @@
       <path value="$PROJECT_DIR$/src/main/webapp/resources/js/pickadate.js-3.5.6/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="28" />
     <option name="y" value="1" />
     <option name="width" value="1346" />
@@ -580,12 +549,12 @@
       <workItem from="1527588801080" duration="94000" />
       <workItem from="1527597121481" duration="243000" />
       <workItem from="1527743928620" duration="693000" />
-      <workItem from="1527745901846" duration="5006000" />
+      <workItem from="1527745901846" duration="5516000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98441000" />
+    <option name="totallyTimeSpent" value="98951000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -597,7 +566,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="44" y="-14" width="1877" height="1095" extended-state="7" />
+    <frame x="44" y="-14" width="1877" height="1095" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -1023,8 +992,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="79" column="81" lean-forward="true" selection-start-line="79" selection-start-column="81" selection-end-line="79" selection-end-column="81" />
+        <state relative-caret-position="405">
+          <caret line="74" column="36" lean-forward="true" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
         </state>
       </provider>
     </entry>

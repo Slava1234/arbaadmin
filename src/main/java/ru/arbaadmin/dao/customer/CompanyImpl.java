@@ -3,7 +3,7 @@ package ru.arbaadmin.dao.customer;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
-import ru.arbaadmin.model.currier.Company;
+import ru.arbaadmin.model.customer.Company;
 
 import java.util.List;
 

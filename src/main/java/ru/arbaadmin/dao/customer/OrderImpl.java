@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
-import ru.arbaadmin.model.currier.Order;
+import ru.arbaadmin.model.customer.Order;
 
 import java.util.List;
 

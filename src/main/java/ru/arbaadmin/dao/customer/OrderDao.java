@@ -1,6 +1,6 @@
 package ru.arbaadmin.dao.customer;
 
-import ru.arbaadmin.model.currier.Order;
+import ru.arbaadmin.model.customer.Order;
 
 import java.util.List;
 
