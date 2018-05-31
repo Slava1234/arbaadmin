@@ -1,4 +1,4 @@
-package ru.arbaadmin.model;
+package ru.arbaadmin.model.customer;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "arbaadmin_company")
+@Table(name = "arbaadmin_customer_company")
 public class Company {
 
     @Id

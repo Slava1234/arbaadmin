@@ -1,12 +1,9 @@
-package ru.arbaadmin.dao;
+package ru.arbaadmin.dao.customer;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Criterion;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
-import ru.arbaadmin.model.Company;
-import ru.arbaadmin.model.Order;
+import ru.arbaadmin.model.currier.Company;
 
 import java.util.List;
 

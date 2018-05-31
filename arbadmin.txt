@@ -1,0 +1,80 @@
+// customer
+
+CREATE TABLE arbaadmin_customer_company(
+id bigserial primary key,
+company_name varchar(200),
+company_city varchar(200),
+company_address varchar(200),
+contact_person varchar(200),
+phone varchar(100),
+site varchar(200),
+bin_iin varchar(200)
+);
+
+CREATE TABLE arbaadmin_customer_order(
+id bigserial primary key,
+request_status varchar(100),
+direction_to varchar(250),
+direction_from varchar(250),
+km varchar(250),
+description_of_cargo varchar(255),
+weight varchar(10),
+volume varchar(10),
+departure_date varchar(50),
+delivery_date varchar(50),
+driver_full_name varchar(200),
+gps varchar(100),
+driver_phone varchar(100),
+vehicle_type1 varchar(100),
+car_number varchar(50),
+cost_of_transportation varchar(250),
+currency varchar(5),
+payment_method varchar(100),
+number_of_requested_cars varchar(100),
+loading_method varchar(100),
+type_of_transport varchar(100),
+calculator varchar(100),
+carrier_price varchar(250), 
+percentage_of_round_trip varchar(50),
+company_id integer
+);
+
+
+// *******************************************
+// currier
+
+
+CREATE TABLE arbaadmin_currier_company(
+id bigserial primary key,
+company_name varchar(200),
+company_city varchar(200),
+company_address varchar(200),
+contact_person varchar(200),
+phone varchar(100),
+site varchar(200),
+bin_iin varchar(200)
+);
+
+CREATE TABLE arbaadmin_currier_order(
+id bigserial primary key,
+request_status varchar(100),
+direction_to varchar(250),
+direction_from varchar(250),
+km varchar(250),
+description_of_cargo varchar(255),
+weight varchar(10),
+volume varchar(10),
+departure_date varchar(50),
+delivery_date varchar(50),
+gps varchar(100),
+cost_of_transportation varchar(250),
+currency varchar(5),
+payment_method varchar(100),
+number_of_requested_cars varchar(100),
+loading_method varchar(100),
+type_of_transport varchar(100),
+calculator varchar(100),
+customer_price varchar(250), 
+percentage_of_round_trip varchar(50),
+company_id integer
+);

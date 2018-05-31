@@ -15,8 +15,6 @@
 
 
     <style>
-
-
         .left-company-list {
             height: 80%;
             overflow: auto;
@@ -24,17 +22,13 @@
             border: 1px solid #e3e3e3;
             border-radius: 3px;
         }
-
         .orders-box {
 
         }
-
         .badge {
             float: right;
         }
     </style>
-
-
 </head>
 <body>
 
@@ -47,80 +41,12 @@
         </div>
     </div>
 
-    
-    
-    
-    
+    <h2>Перевозчик</h2>
+
 
     <div class="row col-md-12">
-
-
-
-        <nav class="nav-sidebar left-company-list col-md-3">
-            <a class="btn btn-default btn-sm" href="${pageContext.request.contextPath}/add-company" style="margin-top: 5px;margin-bottom: 10px;">Добавить компанию</a>
-
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th class="text-size-14 font-size-13" scope="col"></th>
-                            <th class="text-size-14 font-size-13" scope="col"></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                      <c:forEach items="${companies}" var="company">
-                            <tr>
-                                <th class="text-size-14 font-size-13 order-id" name="order-id" scope="col">
-                                    <img company_id="${company.id}" data-toggle="modal" data-target="#companyInfo" style="width: 30px;cursor: pointer;" class="view-company-btn"
-                                         src="<c:url value="/resources/img/show-property.png" />"/>
-                                </th>
-                                <th class="text-size-14 font-size-13" scope="col">
-                                    <a href="${pageContext.request.contextPath}/company/${company.id}">
-                                            ${company.company_name}
-                                        <span class="badge">
-                                                ${company.orders.size()}
-                                        </span>
-                                    </a>
-                                </th>
-                            </tr>
-                        </c:forEach>
-                        </tbody>
-                    </table>
-
-        </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- INCLUDE LEFT SIDEBAR -->
+        <%@ include file="./parts/left-sidebar.jsp" %>
     </div>
 
 </div>
@@ -142,27 +68,32 @@
 
                 <div class="form-group">
                     <label for="view_company_name">Название компании</label>
-                    <input readonly name="view_company_name" type="text" class="form-control" id="view_company_name" placeholder="Название компании">
+                    <input readonly name="view_company_name" type="text" class="form-control" id="view_company_name"
+                           placeholder="Название компании">
                 </div>
 
                 <div class="form-group">
                     <label for="view_company_city">Город</label>
-                    <input readonly name="view_company_city" type="text" class="form-control" id="view_company_city" placeholder="Город">
+                    <input readonly name="view_company_city" type="text" class="form-control" id="view_company_city"
+                           placeholder="Город">
                 </div>
 
                 <div class="form-group">
                     <label for="view_company_address">Адрес</label>
-                    <input readonly name="view_company_address" type="text" class="form-control" id="view_company_address" placeholder="Город">
+                    <input readonly name="view_company_address" type="text" class="form-control"
+                           id="view_company_address" placeholder="Город">
                 </div>
 
                 <div class="form-group">
                     <label for="view_contact_person">Контактное лицо</label>
-                    <input readonly name="view_contact_person" type="text" class="form-control" id="view_contact_person" placeholder="Город">
+                    <input readonly name="view_contact_person" type="text" class="form-control" id="view_contact_person"
+                           placeholder="Город">
                 </div>
 
                 <div class="form-group">
                     <label for="view_phone">Телефон</label>
-                    <input readonly name="view_phone" type="text" class="form-control" id="view_phone" placeholder="Город">
+                    <input readonly name="view_phone" type="text" class="form-control" id="view_phone"
+                           placeholder="Город">
                 </div>
 
                 <div class="form-group">
@@ -172,7 +103,8 @@
 
                 <div class="form-group">
                     <label for="view_bin_iin">Бин/иин</label>
-                    <input readonly name="view_bin_iin" type="text" class="form-control" id="view_bin_iin" placeholder="Бин/иин">
+                    <input readonly name="view_bin_iin" type="text" class="form-control" id="view_bin_iin"
+                           placeholder="Бин/иин">
                 </div>
 
                 <button class="btn btn-primary" name="update-company">Update</button>
@@ -184,7 +116,8 @@
 
 
 <!-- Make sure to delete company -->
-<div class="modal fade" id="deleteCompanyToBeSure" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteCompanyToBeSure" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content" style="padding: 0 30px 0 30px;">
             <div class="modal-header">
@@ -192,15 +125,17 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-                <h3 style="text-align: center">Удалить компанию?</h3>
+            <h3 style="text-align: center">Удалить компанию?</h3>
 
-                <div style="text-align: center; display: block; width: 100%;margin-bottom: 50px;">
-                    <button class="btn btn-success btn-lg view-company-delete-no" data-dismiss="modal" aria-label="Close" >Нет</button>
-                    <button class="btn btn-danger btn-lg view-company-delete">Да</button>
-                </div>
+            <div style="text-align: center; display: block; width: 100%;margin-bottom: 50px;">
+                <button class="btn btn-success btn-lg view-company-delete-no" data-dismiss="modal" aria-label="Close">
+                    Нет
+                </button>
+                <button class="btn btn-danger btn-lg view-company-delete">Да</button>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 
@@ -222,11 +157,11 @@
 
     $('#cv-data-table').DataTable();
 
-    $(function() {
-        $( ".datepicker" ).datepicker({
-            dateFormat : 'dd.mm.yy',
-            changeMonth : true,
-            changeYear : true,
+    $(function () {
+        $(".datepicker").datepicker({
+            dateFormat: 'dd.mm.yy',
+            changeMonth: true,
+            changeYear: true,
             //yearRange: '-100y:c+nn',
             yearRange: '2017:2025',
             // maxDate: '-1d'
@@ -237,7 +172,6 @@
 
 
     // preloader
-
 
 
     //arbaadmin
@@ -256,53 +190,12 @@
     });
 
 
-
-
     $(document).ready(function () {
 
     });
 
 
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </body>

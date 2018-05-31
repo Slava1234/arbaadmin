@@ -1,14 +1,11 @@
-package ru.arbaadmin.model;
+package ru.arbaadmin.model.currier;
 
 
 import javax.persistence.*;
-import java.sql.Date;
-import java.util.Objects;
 
 @Entity
-@Table(name = "arbaadmin_order")
+@Table(name = "arbaadmin_currier_order")
 public class Order {
-
 
     @Id
     @Column(name = "id")
@@ -21,7 +18,6 @@ public class Order {
     @Column(name = "direction_to")
     private String direction_to;
 
-
     @Column(name = "direction_from")
     private String direction_from;
 
@@ -31,13 +27,11 @@ public class Order {
     @Column(name = "description_of_cargo")
     private String description_of_cargo;
 
-
     @Column(name = "weight")
     private String weight;
 
     @Column(name = "volume")
     private String volume;
-
 
     @Column(name = "departure_date")
     private String departure_date;
@@ -45,23 +39,8 @@ public class Order {
     @Column(name = "delivery_date")
     private String delivery_date;
 
-    @Column(name = "driver_full_name")
-    private String driver_full_name;
-
-
     @Column(name = "gps")
     private String gps;
-
-
-    @Column(name = "driver_phone")
-    private String driver_phone;
-
-    @Column(name = "vehicle_type1")
-    private String brand_of_machine;
-
-
-    @Column(name = "car_number")
-    private String car_number;
 
     @Column(name = "cost_of_transportation")
     private String cost_of_transportation;
@@ -81,12 +60,11 @@ public class Order {
     @Column(name = "type_of_transport")
     private String type_of_transport;
 
-
     @Column(name = "calculator")
     private String calculator;
 
-    @Column(name = "carrier_price")
-    private String carrier_price;
+    @Column(name = "customer_price")
+    private String customer_price;
 
     @Column(name = "percentage_of_round_trip")
     private String percentage_of_round_trip;
@@ -101,24 +79,6 @@ public class Order {
 
     // Methods
 
-
-
-    public Company getCompanies() {
-        return this.companies;
-    }
-
-
-    public Integer getCompany_id() {
-        return company_id;
-    }
-
-    public void setCompany_id(Integer company_id) {
-        this.company_id = company_id;
-    }
-
-    public void setCompanies(Company companies) {
-        this.companies = companies;
-    }
 
     public Integer getId() {
         return id;
@@ -200,44 +160,12 @@ public class Order {
         this.delivery_date = delivery_date;
     }
 
-    public String getDriver_full_name() {
-        return driver_full_name;
-    }
-
-    public void setDriver_full_name(String driver_full_name) {
-        this.driver_full_name = driver_full_name;
-    }
-
     public String getGps() {
         return gps;
     }
 
     public void setGps(String gps) {
         this.gps = gps;
-    }
-
-    public String getDriver_phone() {
-        return driver_phone;
-    }
-
-    public void setDriver_phone(String driver_phone) {
-        this.driver_phone = driver_phone;
-    }
-
-    public String getBrand_of_machine() {
-        return brand_of_machine;
-    }
-
-    public void setBrand_of_machine(String brand_of_machine) {
-        this.brand_of_machine = brand_of_machine;
-    }
-
-    public String getCar_number() {
-        return car_number;
-    }
-
-    public void setCar_number(String car_number) {
-        this.car_number = car_number;
     }
 
     public String getCost_of_transportation() {
@@ -296,12 +224,12 @@ public class Order {
         this.calculator = calculator;
     }
 
-    public String getCarrier_price() {
-        return carrier_price;
+    public String getCustomer_price() {
+        return customer_price;
     }
 
-    public void setCarrier_price(String carrier_price) {
-        this.carrier_price = carrier_price;
+    public void setCustomer_price(String customer_price) {
+        this.customer_price = customer_price;
     }
 
     public String getPercentage_of_round_trip() {
@@ -312,5 +240,47 @@ public class Order {
         this.percentage_of_round_trip = percentage_of_round_trip;
     }
 
+    public Integer getCompany_id() {
+        return company_id;
+    }
 
+    public void setCompany_id(Integer company_id) {
+        this.company_id = company_id;
+    }
+
+    public Company getCompanies() {
+        return companies;
+    }
+
+    public void setCompanies(Company companies) {
+        this.companies = companies;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", request_status='" + request_status + '\'' +
+                ", direction_to='" + direction_to + '\'' +
+                ", direction_from='" + direction_from + '\'' +
+                ", km='" + km + '\'' +
+                ", description_of_cargo='" + description_of_cargo + '\'' +
+                ", weight='" + weight + '\'' +
+                ", volume='" + volume + '\'' +
+                ", departure_date='" + departure_date + '\'' +
+                ", delivery_date='" + delivery_date + '\'' +
+                ", gps='" + gps + '\'' +
+                ", cost_of_transportation='" + cost_of_transportation + '\'' +
+                ", currency='" + currency + '\'' +
+                ", payment_method='" + payment_method + '\'' +
+                ", number_of_requested_cars='" + number_of_requested_cars + '\'' +
+                ", loading_method='" + loading_method + '\'' +
+                ", type_of_transport='" + type_of_transport + '\'' +
+                ", calculator='" + calculator + '\'' +
+                ", customer_price='" + customer_price + '\'' +
+                ", percentage_of_round_trip='" + percentage_of_round_trip + '\'' +
+                ", company_id=" + company_id +
+                ", companies=" + companies +
+                '}';
+    }
 }

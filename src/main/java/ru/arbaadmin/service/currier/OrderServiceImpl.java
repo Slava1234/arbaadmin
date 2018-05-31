@@ -1,9 +1,9 @@
-package ru.arbaadmin.service;
+package ru.arbaadmin.service.currier;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.arbaadmin.dao.OrderDao;
-import ru.arbaadmin.model.Order;
+import ru.arbaadmin.dao.currier.OrderDao;
+import ru.arbaadmin.model.currier.Order;
 
 
 import java.util.List;

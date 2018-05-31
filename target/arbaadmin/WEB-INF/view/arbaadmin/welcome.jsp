@@ -19,8 +19,8 @@
 
 <div class="container col-md-12" style="text-align: center; padding-top: 218px;">
 
-    <a href="" class="btn btn-default btn-lg">Заказчик</a>
-    <a href="" class="btn btn-default btn-lg">Перевозчик</a>
+    <a href="./customer" class="btn btn-default btn-lg">Заказчик</a>
+    <a href="./currier" class="btn btn-default btn-lg">Перевозчик</a>
 
 </div>
 

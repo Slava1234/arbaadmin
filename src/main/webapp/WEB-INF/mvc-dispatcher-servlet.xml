@@ -46,8 +46,11 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
             <list>
-                <value>ru.arbaadmin.model.Company</value>
-                <value>ru.arbaadmin.model.Order</value>
+                <value>ru.arbaadmin.model.currier.Company</value>
+                <value>ru.arbaadmin.model.currier.Order</value>
+
+                <value>ru.arbaadmin.model.customer.Company</value>
+                <value>ru.arbaadmin.model.customer.Order</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -60,30 +63,53 @@
     </bean>
 
 
-    <!-- Company injection -->
-    <bean id="companyDao" class="ru.arbaadmin.dao.CompanyImpl">
+    <!-- Customer Company injection -->
+    <bean id="customerCompanyDao" class="ru.arbaadmin.dao.customer.CompanyImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
 
-    <bean id="companyServiceImpl" class="ru.arbaadmin.service.CompanyServiceImpl">
-        <property name="companyDao" ref="companyDao"/>
+    <bean id="customerCompanyServiceImpl" class="ru.arbaadmin.service.customer.CompanyServiceImpl">
+        <property name="companyDao" ref="customerCompanyDao"/>
     </bean>
 
-    <!-- Order injection -->
-    <bean id="orderDao" class="ru.arbaadmin.dao.OrderImpl">
+    <!-- Currier Order injection -->
+    <bean id="customerOrderDao" class="ru.arbaadmin.dao.customer.OrderImpl">
         <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
     </bean>
 
-    <bean id="orderServiceImpl" class="ru.arbaadmin.service.OrderServiceImpl">
-        <property name="orderDao" ref="orderDao"/>
+    <bean id="customerOrderServiceImpl" class="ru.arbaadmin.service.customer.OrderServiceImpl">
+        <property name="orderDao" ref="customerOrderDao"/>
     </bean>
+
+
+    <!-- Currier Company injection -->
+    <bean id="carrierCompanyDao" class="ru.arbaadmin.dao.currier.CompanyImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id="carrierCompanyServiceImpl" class="ru.arbaadmin.service.currier.CompanyServiceImpl">
+        <property name="companyDao" ref="carrierCompanyDao"/>
+    </bean>
+
+    <!-- Customer Order injection -->
+    <bean id="carrierOrderDao" class="ru.arbaadmin.dao.currier.OrderImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id="currierOrderServiceImpl" class="ru.arbaadmin.service.currier.OrderServiceImpl">
+        <property name="orderDao" ref="carrierOrderDao"/>
+    </bean>
+
+
+
+
+
 
 
     <!-- Upload files  bean -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <!-- setting maximum upload size -->
         <property name="maxUploadSize" value="1000000"/>
-
     </bean>
 
 

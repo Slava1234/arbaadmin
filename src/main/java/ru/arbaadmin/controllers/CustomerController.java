@@ -4,16 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 import ru.arbaadmin.dao.currier.CompanyDao;
 import ru.arbaadmin.dao.currier.OrderDao;
-import ru.arbaadmin.model.currier.Company;
-import ru.arbaadmin.model.currier.Order;
-
-import java.util.List;
 
 @Controller
-public class CurrierController {
+public class CustomerController {
 
 
     private CompanyDao companyServiceImpl;
@@ -33,12 +28,12 @@ public class CurrierController {
     }
 
 
-    @RequestMapping(value = "/currier", method = RequestMethod.GET)
+    @RequestMapping(value = "/customer", method = RequestMethod.GET)
     public String index() {
-        return "arbaadmin/carrier/index";
+        return "arbaadmin/customer/index";
     }
 
-    @RequestMapping(value = "/company", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/company", method = RequestMethod.GET)
     public ModelAndView company() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("arbaadmin/customer/index");
@@ -101,12 +96,17 @@ public class CurrierController {
             @RequestParam(value = "km", required = false) String km,
             @RequestParam(value = "departure_date", required = false) String departure_date,
             @RequestParam(value = "delivery_date", required = false) String delivery_date,
+            @RequestParam(value = "driver_full_name", required = false) String driver_full_name,
             @RequestParam(value = "gps", required = false) String gps,
+            @RequestParam(value = "driver_phone", required = false) String driver_phone,
+            @RequestParam(value = "vehicle_type1", required = false) String vehicle_type1,
+            @RequestParam(value = "car_number", required = false) String car_number,
             @RequestParam(value = "cost_of_transportation", required = false) String cost_of_transportation,
             @RequestParam(value = "currency", required = false) String currency,
             @RequestParam(value = "payment_method", required = false) String payment_method,
             @RequestParam(value = "loading_method", required = false) String loading_method,
             @RequestParam(value = "type_of_transport", required = false) String type_of_transport,
+            @RequestParam(value = "carrier_price", required = false) String carrier_price,
             @RequestParam(value = "percentage_of_round_trip", required = false) String percentage_of_round_trip
     ) {
 
@@ -122,12 +122,17 @@ public class CurrierController {
         order.setKm(km);
         order.setDeparture_date(departure_date);
         order.setDelivery_date(delivery_date);
+        order.setDriver_full_name(driver_full_name);
         order.setGps(gps);
+        order.setDriver_phone(driver_phone);
+        order.setBrand_of_machine(vehicle_type1);
+        order.setCar_number(car_number);
         order.setCost_of_transportation(cost_of_transportation);
         order.setCurrency(currency);
         order.setPayment_method(payment_method);
         order.setLoading_method(loading_method);
         order.setType_of_transport(type_of_transport);
+        order.setCarrier_price(carrier_price);
         order.setPercentage_of_round_trip(percentage_of_round_trip);
 
         Company company = this.companyServiceImpl.getCompanyById(company_id);
@@ -138,6 +143,19 @@ public class CurrierController {
 
         return "true";
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -157,12 +175,17 @@ public class CurrierController {
             @RequestParam(value = "km", required = false) String km,
             @RequestParam(value = "departure_date", required = false) String departure_date,
             @RequestParam(value = "delivery_date", required = false) String delivery_date,
+            @RequestParam(value = "driver_full_name", required = false) String driver_full_name,
             @RequestParam(value = "gps", required = false) String gps,
+            @RequestParam(value = "driver_phone", required = false) String driver_phone,
+            @RequestParam(value = "vehicle_type1", required = false) String vehicle_type1,
+            @RequestParam(value = "car_number", required = false) String car_number,
             @RequestParam(value = "cost_of_transportation", required = false) String cost_of_transportation,
             @RequestParam(value = "currency", required = false) String currency,
             @RequestParam(value = "payment_method", required = false) String payment_method,
             @RequestParam(value = "loading_method", required = false) String loading_method,
             @RequestParam(value = "type_of_transport", required = false) String type_of_transport,
+            @RequestParam(value = "carrier_price", required = false) String carrier_price,
             @RequestParam(value = "percentage_of_round_trip", required = false) String percentage_of_round_trip
     ) {
 
@@ -179,12 +202,17 @@ public class CurrierController {
         order.setKm(km);
         order.setDeparture_date(departure_date);
         order.setDelivery_date(delivery_date);
+        order.setDriver_full_name(driver_full_name);
         order.setGps(gps);
+        order.setDriver_phone(driver_phone);
+        order.setBrand_of_machine(vehicle_type1);
+        order.setCar_number(car_number);
         order.setCost_of_transportation(cost_of_transportation);
         order.setCurrency(currency);
         order.setPayment_method(payment_method);
         order.setLoading_method(loading_method);
         order.setType_of_transport(type_of_transport);
+        order.setCarrier_price(carrier_price);
         order.setPercentage_of_round_trip(percentage_of_round_trip);
 
         Company company = this.companyServiceImpl.getCompanyById(company_id);
@@ -291,7 +319,7 @@ public class CurrierController {
     }
 
 
-
+*/
 }
 
 
