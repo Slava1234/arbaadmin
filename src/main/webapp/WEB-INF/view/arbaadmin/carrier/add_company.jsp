@@ -13,7 +13,7 @@
 
 <div class="container col-md-6 col-md-offset-3">
     <a style="margin-top: 5px;" href="${pageContext.request.contextPath}/"  class="btn btn-primary">Назад</a><br><br>
-    <form method="post" action="${pageContext.request.contextPath}/add-company-post" modelAttribute="Company">
+    <form method="post" action="${pageContext.request.contextPath}/carrier/add-company-post" modelAttribute="Company">
 
         <div class="form-group">
             <label for="company_name">Название компании</label>
@@ -49,7 +49,6 @@
             <label for="site">Сайт</label>
             <input name="site" type="text" class="form-control" id="site" placeholder="Сайт">
         </div>
-
 
 
         <button type="submit" class="btn btn-success add-new-company">Добавить</button>

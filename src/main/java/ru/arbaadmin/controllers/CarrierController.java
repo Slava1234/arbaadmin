@@ -13,6 +13,7 @@ import ru.arbaadmin.model.carrier.CarrierOrder;
 import java.util.List;
 
 @Controller
+@RequestMapping(value = "/carrier")
 public class CarrierController {
 
 
@@ -24,6 +25,8 @@ public class CarrierController {
         this.companyServiceImpl = companyServiceImpl;
     }
 
+
+
     private CarrierOrderDao orderServiceImpl;
 
     @Autowired(required = true)
@@ -33,7 +36,7 @@ public class CarrierController {
     }
 
 
-    @RequestMapping(value = "/currier", method = RequestMethod.GET)
+    @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String index() {
         return "arbaadmin/carrier/index";
     }
@@ -212,19 +215,17 @@ public class CarrierController {
     }
 
 
-
-
     @RequestMapping(value = "/add-company", method = RequestMethod.GET)
     public ModelAndView addNewCompany() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("arbaadmin/customer/add_company");
+        modelAndView.setViewName("arbaadmin/carrier/add_company");
         return modelAndView;
     }
 
     @RequestMapping(value = "/add-company-post", method = RequestMethod.POST)
     public String addNewCompanyPost(@ModelAttribute("Company") CarrierCompany company) {
         this.companyServiceImpl.addCompany(company);
-        return "redirect:/";
+        return "redirect:/carrier/main";
     }
 
     @RequestMapping(value = "/ajax_get_company", method = RequestMethod.POST)

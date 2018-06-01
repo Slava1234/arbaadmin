@@ -304,26 +304,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <button type="button" class="btn btn-success add-new-order">Добавить</button>
     </form>
 

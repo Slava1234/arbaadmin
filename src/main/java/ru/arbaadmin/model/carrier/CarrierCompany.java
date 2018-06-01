@@ -41,6 +41,9 @@ public class CarrierCompany {
 
     // Methods
 
+    public void setToNullOrders() {
+        this.orders = null;
+    }
 
     public Integer getId() {
         return id;
