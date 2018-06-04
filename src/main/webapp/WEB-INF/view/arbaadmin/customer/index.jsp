@@ -13,9 +13,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <title>Компании и заявки</title>
 
-
     <style>
-
 
         .left-company-list {
             height: 80%;
@@ -24,16 +22,10 @@
             border: 1px solid #e3e3e3;
             border-radius: 3px;
         }
-
-        .orders-box {
-
-        }
-
         .badge {
             float: right;
         }
     </style>
-
 
 </head>
 <body>
@@ -49,78 +41,10 @@
 
     <h2>Заказчик</h2>
     
-    
-    
 
     <div class="row col-md-12">
-
-
-
-        <nav class="nav-sidebar left-company-list col-md-3">
-            <a class="btn btn-default btn-sm" href="${pageContext.request.contextPath}/add-company" style="margin-top: 5px;margin-bottom: 10px;">Добавить компанию</a>
-
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th class="text-size-14 font-size-13" scope="col"></th>
-                            <th class="text-size-14 font-size-13" scope="col"></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                      <c:forEach items="${companies}" var="company">
-                            <tr>
-                                <th class="text-size-14 font-size-13 order-id" name="order-id" scope="col">
-                                    <img company_id="${company.id}" data-toggle="modal" data-target="#companyInfo" style="width: 30px;cursor: pointer;" class="view-company-btn"
-                                         src="<c:url value="/resources/img/show-property.png" />"/>
-                                </th>
-                                <th class="text-size-14 font-size-13" scope="col">
-                                    <a href="${pageContext.request.contextPath}/company/${company.id}">
-                                            ${company.company_name}
-                                        <span class="badge">
-                                                ${company.orders.size()}
-                                        </span>
-                                    </a>
-                                </th>
-                            </tr>
-                        </c:forEach>
-                        </tbody>
-                    </table>
-
-        </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- INCLUDE LEFT SIDEBAR -->
+        <%@ include file="./parts/left-sidebar.jsp" %>
     </div>
 
 </div>

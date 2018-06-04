@@ -53,21 +53,6 @@ public class CarrierController {
         return modelAndView;
     }
 
-    /*@RequestMapping(value = "/company", method = RequestMethod.GET)
-    public ModelAndView company() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("arbaadmin/carrier/index");
-
-        //Company company = this.companyServiceImpl.getCompanyById(1);
-        // modelAndView.addObject("company", company);
-
-        List<CarrierCompany> companies = this.companyServiceImpl.listCompany();
-
-        modelAndView.addObject("companies", companies);
-
-        return modelAndView;
-    }*/
-
 
     @RequestMapping(value = "/company/{id}", method = RequestMethod.GET)
     public ModelAndView companyOrders(@PathVariable("id") int id) {

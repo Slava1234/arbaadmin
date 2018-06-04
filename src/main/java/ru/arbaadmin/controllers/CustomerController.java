@@ -4,57 +4,53 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import ru.arbaadmin.dao.carrier.CarrierCompanyDao;
-import ru.arbaadmin.dao.carrier.CarrierOrderDao;
+import org.springframework.web.servlet.ModelAndView;
+import ru.arbaadmin.dao.customer.CustomerCompanyDao;
+import ru.arbaadmin.dao.customer.CustomerOrderDao;
+import ru.arbaadmin.model.customer.CustomerCompany;
+import ru.arbaadmin.model.customer.CustomerOrder;
+
+import java.util.List;
 
 @Controller
+@RequestMapping(value = "/customer")
 public class CustomerController {
 
 
-    private CarrierCompanyDao companyServiceImpl;
+    private CustomerCompanyDao companyServiceImpl;
+    private CustomerOrderDao orderServiceImpl;
 
     @Autowired(required = true)
-    @Qualifier(value = "carrierCompanyServiceImpl")
-    public void setCompanyService(CarrierCompanyDao companyServiceImpl) {
+    @Qualifier(value = "customerCompanyServiceImpl")
+    public void setCompanyService(CustomerCompanyDao companyServiceImpl) {
         this.companyServiceImpl = companyServiceImpl;
     }
 
-    private CarrierOrderDao orderServiceImpl;
-
     @Autowired(required = true)
-    @Qualifier(value = "currierOrderServiceImpl")
-    public void setOrderService(CarrierOrderDao orderServiceImpl) {
+    @Qualifier(value = "customerOrderServiceImpl")
+    public void setOrderService(CustomerOrderDao orderServiceImpl) {
         this.orderServiceImpl = orderServiceImpl;
     }
 
 
-    @RequestMapping(value = "/customer", method = RequestMethod.GET)
-    public String index() {
-        return "arbaadmin/customer/index";
-    }
 
-    /*@RequestMapping(value = "/company", method = RequestMethod.GET)
+
+
+    @RequestMapping(value = "/main", method = RequestMethod.GET)
     public ModelAndView company() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("arbaadmin/customer/index");
-
-        //Company company = this.companyServiceImpl.getCompanyById(1);
-        // modelAndView.addObject("company", company);
-
-        List<Company> companies = this.companyServiceImpl.listCompany();
-
+        List<CustomerCompany> companies = this.companyServiceImpl.listCompany();
         modelAndView.addObject("companies", companies);
-
         return modelAndView;
     }
 
 
     @RequestMapping(value = "/company/{id}", method = RequestMethod.GET)
     public ModelAndView companyOrders(@PathVariable("id") int id) {
-
-        List<Order> orders = this.orderServiceImpl.listOrderById(id);
-        Company company = this.companyServiceImpl.getCompanyById(id);
-        List<Company> companies = this.companyServiceImpl.listCompany();
+        List<CustomerOrder> orders = this.orderServiceImpl.listOrderById(id);
+        CustomerCompany company = this.companyServiceImpl.getCompanyById(id);
+        List<CustomerCompany> companies = this.companyServiceImpl.listCompany();
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("arbaadmin/customer/company");
@@ -62,7 +58,6 @@ public class CustomerController {
         modelAndView.addObject("orders", orders);
         modelAndView.addObject("company", company);
         modelAndView.addObject("companies", companies);
-
         return modelAndView;
     }
 
@@ -73,7 +68,7 @@ public class CustomerController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("arbaadmin/customer/add_order");
 
-        Company company = this.companyServiceImpl.getCompanyById(id);
+        CustomerCompany company = this.companyServiceImpl.getCompanyById(id);
         // todo fix this trash
         company.setToNullOrders();
         // todo is this worth ? could get the company name by javascript (btw)
@@ -106,12 +101,10 @@ public class CustomerController {
             @RequestParam(value = "payment_method", required = false) String payment_method,
             @RequestParam(value = "loading_method", required = false) String loading_method,
             @RequestParam(value = "type_of_transport", required = false) String type_of_transport,
-            @RequestParam(value = "carrier_price", required = false) String carrier_price,
+            @RequestParam(value = "customer_price", required = false) String customer_price,
             @RequestParam(value = "percentage_of_round_trip", required = false) String percentage_of_round_trip
     ) {
-
-
-        Order order = new Order();
+        CustomerOrder order = new CustomerOrder();
         order.setDirection_from(direction_from);
         order.setDirection_to(direction_to);
         order.setRequest_status(request_status);
@@ -125,37 +118,22 @@ public class CustomerController {
         order.setDriver_full_name(driver_full_name);
         order.setGps(gps);
         order.setDriver_phone(driver_phone);
-        order.setBrand_of_machine(vehicle_type1);
+        order.setCar_brand(vehicle_type1);
         order.setCar_number(car_number);
         order.setCost_of_transportation(cost_of_transportation);
         order.setCurrency(currency);
         order.setPayment_method(payment_method);
         order.setLoading_method(loading_method);
         order.setType_of_transport(type_of_transport);
-        order.setCarrier_price(carrier_price);
+        order.setCustomer_price(customer_price);
         order.setPercentage_of_round_trip(percentage_of_round_trip);
 
-        Company company = this.companyServiceImpl.getCompanyById(company_id);
+        CustomerCompany company = this.companyServiceImpl.getCompanyById(company_id);
         order.setCompanies(company);
 
-
         this.orderServiceImpl.addOrder(order);
-
         return "true";
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -185,12 +163,12 @@ public class CustomerController {
             @RequestParam(value = "payment_method", required = false) String payment_method,
             @RequestParam(value = "loading_method", required = false) String loading_method,
             @RequestParam(value = "type_of_transport", required = false) String type_of_transport,
-            @RequestParam(value = "carrier_price", required = false) String carrier_price,
+            @RequestParam(value = "customer_price", required = false) String customer_price,
             @RequestParam(value = "percentage_of_round_trip", required = false) String percentage_of_round_trip
     ) {
 
 
-        Order order = new Order();
+        CustomerOrder order = new CustomerOrder();
         order.setId(order_id);
         order.setDirection_from(direction_from);
         order.setDirection_to(direction_to);
@@ -205,28 +183,27 @@ public class CustomerController {
         order.setDriver_full_name(driver_full_name);
         order.setGps(gps);
         order.setDriver_phone(driver_phone);
-        order.setBrand_of_machine(vehicle_type1);
+        order.setCar_brand(vehicle_type1);
         order.setCar_number(car_number);
         order.setCost_of_transportation(cost_of_transportation);
         order.setCurrency(currency);
         order.setPayment_method(payment_method);
         order.setLoading_method(loading_method);
         order.setType_of_transport(type_of_transport);
-        order.setCarrier_price(carrier_price);
+        order.setCustomer_price(customer_price);
         order.setPercentage_of_round_trip(percentage_of_round_trip);
 
-        Company company = this.companyServiceImpl.getCompanyById(company_id);
+        CustomerCompany company = this.companyServiceImpl.getCompanyById(company_id);
         order.setCompanies(company);
 
         this.orderServiceImpl.updateOrder(order);
-
         return "true";
     }
 
     @RequestMapping(value = "/ajax-get-order", method = RequestMethod.POST)
     @ResponseBody
-    public Order ajaxGetOrder(@RequestParam("orderId") Integer id) {
-        Order order = this.orderServiceImpl.getOrderById(id);
+    public CustomerOrder ajaxGetOrder(@RequestParam("orderId") Integer id) {
+        CustomerOrder order = this.orderServiceImpl.getOrderById(id);
         order.setCompanies(null);
         return order;
     }
@@ -240,8 +217,6 @@ public class CustomerController {
     }
 
 
-
-
     @RequestMapping(value = "/add-company", method = RequestMethod.GET)
     public ModelAndView addNewCompany() {
         ModelAndView modelAndView = new ModelAndView();
@@ -250,15 +225,15 @@ public class CustomerController {
     }
 
     @RequestMapping(value = "/add-company-post", method = RequestMethod.POST)
-    public String addNewCompanyPost(@ModelAttribute("Company") Company company) {
+    public String addNewCompanyPost(@ModelAttribute("Company") CustomerCompany company) {
         this.companyServiceImpl.addCompany(company);
         return "redirect:/";
     }
 
     @RequestMapping(value = "/ajax_get_company", method = RequestMethod.POST)
     @ResponseBody
-    public Company ajaxGetCompany(@RequestParam(value = "id") int id) {
-        Company company = this.companyServiceImpl.getCompanyById(id);
+    public CustomerCompany ajaxGetCompany(@RequestParam(value = "id") int id) {
+        CustomerCompany company = this.companyServiceImpl.getCompanyById(id);
         company.setToNullOrders();
 
         return company;
@@ -279,7 +254,7 @@ public class CustomerController {
     ) {
 
 
-        Company company = new Company();
+        CustomerCompany company = new CustomerCompany();
         company.setId(id);
         company.setCompany_name(view_company_name);
         company.setCompany_city(view_company_city);
@@ -301,25 +276,6 @@ public class CustomerController {
         return "true";
     }
 
-
-    private class Test {
-        private String name;
-        private String age;
-
-
-
-    }
-
-
-    @RequestMapping(value = "/test", method = RequestMethod.POST, headers="Accept=application/json")
-    @ResponseBody
-    public Test test(@RequestBody Test test) {
-
-        return test;
-    }
-
-
-*/
 }
 
 

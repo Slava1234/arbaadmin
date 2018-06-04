@@ -42,6 +42,18 @@ public class CustomerOrder {
     @Column(name = "gps")
     private String gps;
 
+    @Column(name = "driver_full_name")
+    private String driver_full_name;
+
+    @Column(name = "driver_phone")
+    private String driver_phone;
+
+    @Column(name = "car_number")
+    private String car_number;
+
+    @Column(name = "vehicle_type1")
+    private String car_brand;
+
     @Column(name = "cost_of_transportation")
     private String cost_of_transportation;
 
@@ -254,6 +266,38 @@ public class CustomerOrder {
 
     public void setCompanies(CustomerCompany companies) {
         this.companies = companies;
+    }
+
+    public String getDriver_full_name() {
+        return driver_full_name;
+    }
+
+    public void setDriver_full_name(String driver_full_name) {
+        this.driver_full_name = driver_full_name;
+    }
+
+    public String getDriver_phone() {
+        return driver_phone;
+    }
+
+    public void setDriver_phone(String driver_phone) {
+        this.driver_phone = driver_phone;
+    }
+
+    public String getCar_number() {
+        return car_number;
+    }
+
+    public void setCar_number(String car_number) {
+        this.car_number = car_number;
+    }
+
+    public String getCar_brand() {
+        return car_brand;
+    }
+
+    public void setCar_brand(String car_brand) {
+        this.car_brand = car_brand;
     }
 
     @Override

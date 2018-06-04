@@ -2,37 +2,51 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="arbaadmin:war" />
       <artifact name="arbaadmin:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="120798c4-b6c1-4392-85cd-0477d6f8e725" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/carrier/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/customer/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/parts/left-sidebar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arbadmin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/arbadmin.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CarrierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CarrierController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/carrier/CarrierCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/carrier/CarrierCompany.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/carrier/CarrierOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/carrier/CarrierOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/add_order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/add_order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/company.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/company.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/parts/left-sidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/parts/left-sidebar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer/CustomerOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer/CustomerOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/company.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/company.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/classes/ru/arbaadmin/controllers/CarrierController$Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cv/auth.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cv/bookmarks.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cv/cv_add.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cv/cv_edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cv/cv_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cv/cv_search_result.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cv/cv_search_view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cv/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cv/test.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/cv/upload.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/carrier/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/carrier/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/classes/ru/arbaadmin/controllers/CarrierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/classes/ru/arbaadmin/controllers/CarrierController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/classes/ru/arbaadmin/model/carrier/CarrierCompany.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/classes/ru/arbaadmin/model/carrier/CarrierCompany.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/classes/ru/arbaadmin/model/carrier/CarrierOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/classes/ru/arbaadmin/model/carrier/CarrierOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/carrier/add_company.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/carrier/add_company.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/carrier/company.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/carrier/company.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/carrier/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/carrier/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/carrier/parts/left-sidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/carrier/parts/left-sidebar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/arbaadmin/resources/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/resources/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/arbaadmin/controllers/CarrierController$Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/classes/ru/arbaadmin/controllers/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/classes/ru/arbaadmin/controllers/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/classes/ru/arbaadmin/model/customer/CustomerOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/classes/ru/arbaadmin/model/customer/CustomerOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/customer/company.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/customer/company.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/arbaadmin/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/cv/auth.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/cv/bookmarks.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/cv/cv_add.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/cv/cv_edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/cv/cv_list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/cv/cv_search_result.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/cv/cv_search_view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/cv/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/cv/test.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/WEB-INF/view/cv/upload.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/arbaadmin/resources/js/carrier/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/arbaadmin/resources/js/carrier/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/arbaadmin/controllers/CarrierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/arbaadmin/controllers/CarrierController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/arbaadmin/model/carrier/CarrierCompany.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/arbaadmin/model/carrier/CarrierCompany.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/arbaadmin/model/carrier/CarrierOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/arbaadmin/model/carrier/CarrierOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/arbaadmin/controllers/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/arbaadmin/controllers/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/arbaadmin/model/customer/CustomerOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/arbaadmin/model/customer/CustomerOrder.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -59,11 +73,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CarrierController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CarrierController.java">
+      <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="167" column="104" selection-start-line="167" selection-start-column="84" selection-end-line="167" selection-end-column="104" />
+            <state relative-caret-position="560">
+              <caret line="286" lean-forward="true" selection-start-line="286" selection-end-line="286" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,44 +88,67 @@
       <file leaf-file-name="company.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/company.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6637">
-              <caret line="620" column="7" selection-start-line="620" selection-start-column="7" selection-end-line="620" selection-end-column="7" />
+            <state relative-caret-position="272">
+              <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="48" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/carrier/script.js">
+      <file leaf-file-name="company.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/company.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="854" column="47" lean-forward="true" selection-start-line="854" selection-start-column="47" selection-end-line="854" selection-end-column="47" />
+            <state relative-caret-position="128">
+              <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-656">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/welcome.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="72" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="left-sidebar.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/parts/left-sidebar.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerOrder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer/CustomerOrder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="71" column="39" lean-forward="true" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
               <folding>
-                <element signature="e#18645#34732#0" />
+                <element signature="e#6171#6172#0" expanded="true" />
+                <element signature="e#6210#6211#0" expanded="true" />
+                <element signature="e#6274#6275#0" expanded="true" />
+                <element signature="e#6330#6331#0" expanded="true" />
+                <element signature="e#6369#6370#0" expanded="true" />
+                <element signature="e#6404#6405#0" expanded="true" />
+                <element signature="e#6460#6461#0" expanded="true" />
+                <element signature="e#6508#6509#0" expanded="true" />
+                <element signature="e#6545#6546#0" expanded="true" />
+                <element signature="e#6578#6579#0" expanded="true" />
+                <element signature="e#6630#6631#0" expanded="true" />
+                <element signature="e#6674#6675#0" expanded="true" />
+                <element signature="e#6710#6711#0" expanded="true" />
+                <element signature="e#6742#6743#0" expanded="true" />
+                <element signature="e#6792#6793#0" expanded="true" />
+                <element signature="e#6834#6835#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarrierOrder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/carrier/CarrierOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2259">
-              <caret line="230" column="16" selection-start-line="230" selection-start-column="16" selection-end-line="230" selection-end-column="16" />
-              <folding>
-                <element signature="e#1882#1883#0" expanded="true" />
-                <element signature="e#1907#1908#0" expanded="true" />
-                <element signature="e#5190#5191#0" expanded="true" />
-                <element signature="e#5242#5243#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_order.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/add_order.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="193" column="2" selection-start-line="193" selection-start-column="2" selection-end-line="204" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -128,8 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>direction_from</find>
-      <find>km</find>
       <find>description_of_cargo</find>
       <find>departure_date</find>
       <find>vehicle_type1</find>
@@ -153,11 +188,13 @@
       <find>add-new-order</find>
       <find>add</find>
       <find>add-new</find>
-      <find>ready_to_update_company</find>
       <find>update-order</find>
       <find>customer_price</find>
       <find>update</find>
       <find>update-order-ready</find>
+      <find>ready_to_update_company</find>
+      <find>#companyInfo</find>
+      <find>driver_full_name</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,15 +203,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/Order.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/company.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/add_order.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/ArbaadminController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CustomerController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/currier/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer/Company.java" />
@@ -198,7 +232,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/customer/CustomerOrderImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/currier/CurrierCompany.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/currier/CurrierOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer/CustomerOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/service/customer/CustomerCompanyServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/service/customer/CustomerOrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
@@ -212,11 +245,15 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/script.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/parts/left-sidebar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/welcome.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CarrierController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/add_order.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/company.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/carrier/script.js" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CarrierController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer/CustomerOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/welcome.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/company.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/index.jsp" />
       </list>
     </option>
   </component>
@@ -234,11 +271,9 @@
     <option name="CUSTOM_FILTER" value="" />
   </component>
   <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/src/main/webapp/resources/js/pickadate.js-3.5.6/package.json" />
-    </packageJsonPaths>
+    <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="28" />
     <option name="y" value="1" />
     <option name="width" value="1346" />
@@ -250,9 +285,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,15 +316,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
               <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -301,7 +324,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
               <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -311,39 +333,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="carrier" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
               <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -353,7 +342,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
               <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="carrier" type="462c0819:PsiDirectoryNode" />
@@ -364,7 +352,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
               <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="customer" type="462c0819:PsiDirectoryNode" />
@@ -374,66 +361,7 @@
               <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="carrier" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ru" type="462c0819:PsiDirectoryNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="carrier" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
@@ -472,36 +400,74 @@
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
               <item name="carrier" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="carrier" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="arbaadmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="arbaadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../arbalv-arba-0036c3f85ba9" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\IdeaProjects\arbaadmin\arbaadmin\src\main\webapp\WEB-INF\view\arbaadmin\customer\parts" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/js/carrier" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/js/customer" />
+      <recent name="$PROJECT_DIR$/src/main/java/ru/arbaadmin/service/customer" />
+      <recent name="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/customer" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.arbaadmin.controllers" />
       <recent name="ru.arbaadmin.service" />
       <recent name="ru.arbaadmin.dao" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/js/carrier" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/resources/js/customer" />
-      <recent name="$PROJECT_DIR$/src/main/java/ru/arbaadmin/service/customer" />
-      <recent name="$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/customer" />
-      <recent name="$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -663,11 +629,12 @@
       <workItem from="1528091195466" duration="1085000" />
       <workItem from="1528092715163" duration="1185000" />
       <workItem from="1528094012950" duration="17184000" />
+      <workItem from="1528125512250" duration="5880000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125106000" />
+    <option name="totallyTimeSpent" value="130986000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -679,8 +646,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="45" y="-4" width="1875" height="1084" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
@@ -701,17 +667,17 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.3232534" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32289952" />
       <window_info anchor="bottom" id="Spring" order="12" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27332243" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27760968" />
       <window_info anchor="right" id="Bean Validation" order="7" weight="0.32980332" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3295099" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3295099" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -724,9 +690,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/service/CvServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/AuthController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CvController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/CvDaoImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/interceptors/AuthInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -737,13 +700,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../glassfish4-arbaadmin/glassfish/domains/domain1/config/domain.xml" />
     <entry file="file://$PROJECT_DIR$/../../domain.xml" />
-    <entry file="file://$PROJECT_DIR$/../crudtest/sober_hiber/src/main/java/ru/sober/controllers/CvController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1343">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../crudtest/sober_hiber/src/main/java/ru/sober/controllers/CvController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/pickadate.js-3.5.6/tests/jquery.1.7.0.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -791,13 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="190" column="62" selection-start-line="190" selection-start-column="62" selection-end-line="190" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -855,13 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer/CustomerOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="259" column="18" selection-start-line="259" selection-start-column="18" selection-end-line="259" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/service/carrier/CarrierCompanyServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -890,20 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/dao/carrier/CarrierCompanyImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -911,31 +840,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer/CustomerCompany.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/add_company.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
           <caret line="38" column="63" lean-forward="true" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/carrier/CarrierCompany.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -959,57 +867,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/welcome.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/carrier/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="111">
+          <caret line="603" column="42" lean-forward="true" selection-start-line="603" selection-start-column="42" selection-end-line="603" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/carrier/CarrierOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2259">
+        <state relative-caret-position="83">
           <caret line="230" column="16" selection-start-line="230" selection-start-column="16" selection-end-line="230" selection-end-column="16" />
-          <folding>
-            <element signature="e#1882#1883#0" expanded="true" />
-            <element signature="e#1907#1908#0" expanded="true" />
-            <element signature="e#5190#5191#0" expanded="true" />
-            <element signature="e#5242#5243#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/add_order.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
+        <state relative-caret-position="237">
           <caret line="193" column="2" selection-start-line="193" selection-start-column="2" selection-end-line="204" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CarrierController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="167" column="104" selection-start-line="167" selection-start-column="84" selection-end-line="167" selection-end-column="104" />
+        <state relative-caret-position="714">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/company.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6637">
-          <caret line="620" column="7" selection-start-line="620" selection-start-column="7" selection-end-line="620" selection-end-column="7" />
+        <state relative-caret-position="-414">
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/carrier/script.js">
+    <entry file="file://$PROJECT_DIR$/arbadmin.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="854" column="47" lean-forward="true" selection-start-line="854" selection-start-column="47" selection-end-line="854" selection-end-column="47" />
+        <state relative-caret-position="336">
+          <caret line="27" column="13" selection-start-line="27" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer/CustomerCompany.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/carrier/CarrierCompany.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/model/customer/CustomerOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="71" column="39" lean-forward="true" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
           <folding>
-            <element signature="e#18645#34732#0" />
+            <element signature="e#6171#6172#0" expanded="true" />
+            <element signature="e#6210#6211#0" expanded="true" />
+            <element signature="e#6274#6275#0" expanded="true" />
+            <element signature="e#6330#6331#0" expanded="true" />
+            <element signature="e#6369#6370#0" expanded="true" />
+            <element signature="e#6404#6405#0" expanded="true" />
+            <element signature="e#6460#6461#0" expanded="true" />
+            <element signature="e#6508#6509#0" expanded="true" />
+            <element signature="e#6545#6546#0" expanded="true" />
+            <element signature="e#6578#6579#0" expanded="true" />
+            <element signature="e#6630#6631#0" expanded="true" />
+            <element signature="e#6674#6675#0" expanded="true" />
+            <element signature="e#6710#6711#0" expanded="true" />
+            <element signature="e#6742#6743#0" expanded="true" />
+            <element signature="e#6792#6793#0" expanded="true" />
+            <element signature="e#6834#6835#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/arbaadmin/controllers/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="286" lean-forward="true" selection-start-line="286" selection-end-line="286" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/welcome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="72" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/parts/left-sidebar.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/carrier/company.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="48" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/company.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/arbaadmin/customer/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-656">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
