@@ -14,8 +14,6 @@
 <div class="container col-md-6 col-md-offset-3">
     <a style="margin-top: 5px;" href="${pageContext.request.contextPath}"  class="btn btn-primary">Назад</a><br><br>
     <form>
-
-
         <h2>Заказ для компании "${company.company_name}"</h2>
 
         <input type="text" name="company_id" hidden value="${company.id}">
@@ -35,25 +33,11 @@
             <input name="percentage_of_round_trip" type="text" class="form-control" id="percentage_of_round_trip" placeholder="% от туда и обратно">
         </div>
 
-
-        <!--
-        <div class="form-group">
-            <label for="request_status">Статус заявки</label>
-            <select class="selectpicker" style="width: 100px;border: 1px solid #cccccc;border-radius: 3px;" id="request_status">
-                <option>Открыта</option>
-                <option>Закрыта</option>
-            </select>
-        </div>
-        -->
-
-
         <div class="form-group">
             <label for="description_of_cargo">Описание груза</label>
             <!--input name="description_of_cargo" type="text" class="form-control" id="description_of_cargo" placeholder="Описание груза"-->
             <textarea class="form-control" name="description_of_cargo" id="description_of_cargo" cols="30" rows="6" placeholder="Описание груза"></textarea>
         </div>
-
-
 
         <div class="col-md-12">
             <div class="col-md-6">
@@ -62,20 +46,13 @@
                     <input name="weight" type="text" class="form-control" id="weight" placeholder="Вес">
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="volume">Объем</label>
                     <input name="volume" type="text" class="form-control" id="volume" placeholder="Объем">
                 </div>
-
             </div>
-
         </div>
-
-
-
-
 
         <div class="col-md-12">
             <div class="col-md-6">
@@ -91,9 +68,6 @@
                 </div>
             </div>
         </div>
-
-
-
 
 
         <div class="col-md-12">
@@ -112,39 +86,6 @@
             </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-        <div class="col-md-12">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="vehicle_type1">Марка Авто</label>
-                    <input name="vehicle_type1" type="text" class="form-control" id="vehicle_type1" placeholder="Марка Авто">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="car_number">Гос.номер авто</label>
-                    <input name="car_number" type="text" class="form-control" id="car_number" placeholder="Гос.номер авто">
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
         <div class="col-md-12">
             <div class="col-md-6">
                 <div class="form-group">
@@ -154,40 +95,13 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="carrier_price">Цена перевозчика</label>
-                    <input name="carrier_price" type="text" class="form-control" id="carrier_price" placeholder="Цена перевозчика">
+                    <label for="customer_price">Стоимость заказчика</label>
+                    <input name="customer_price" type="text" class="form-control" id="customer_price" placeholder="Стоимость заказчика">
                 </div>
             </div>
         </div>
-
-
-
-
-
-        <div class="col-md-12">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="driver_full_name">ФИО Водителя</label>
-                    <input type="text" name="driver_full_name" class="form-control" id="driver_full_name" placeholder="ФИО Водителя">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="driver_phone">Телефон водителя</label>
-                    <input name="driver_phone" type="text" class="form-control" id="driver_phone" placeholder="Телефон водителя">
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
 
         <!-- select options below -->
-
         <div class="col-md-12" style="margin: 10px 0 10px 0;">
             <div class="col-md-6">
                 <div class="form-group" style="text-align: center">
@@ -220,89 +134,51 @@
             </div>
         </div>
 
-
-
-
         <div class="col-md-12" style="margin: 10px 0 10px 0;">
             <div class="col-md-3">
-                <!--div class="form-group">
-                    <label for="currency">Валюта</label>
-                    <select class="selectpicker" style="width: 100px;border: 1px solid #cccccc;border-radius: 3px;" id="currency">
-                        <option>KZT</option>
-                        <option>RUB</option>
-                        <option>USD</option>
-                    </select>
-                </div-->
-
                 <div class="form-check" style="text-align: center">
                     <b>Валюта</b><br>
-                    <input class="form-check-input" name="group100" type="radio" id="currency_KZT">
-                    <label class="form-check-label" for="radio100">KZT</label><br>
-                    <input class="form-check-input" name="group100" type="radio" id="currency_RUB">
-                    <label class="form-check-label" for="radio100">RUB</label><br>
-                    <input class="form-check-input" name="group100" type="radio" id="currency_USD">
-                    <label class="form-check-label" for="radio100">USD</label>
+                    <input class="form-check-input" name="currency" type="radio" id="currency_KZT" value="KZT">
+                    <label class="form-check-label" for="currency_KZT">KZT</label><br>
+                    <input class="form-check-input" name="currency" type="radio" id="currency_RUB" value="RUB">
+                    <label class="form-check-label" for="currency_RUB">RUB</label><br>
+                    <input class="form-check-input" name="currency" type="radio" id="currency_USD" value="USD">
+                    <label class="form-check-label" for="currency_USD">USD</label>
                 </div>
-
 
             </div>
             <div class="col-md-3">
-                <!--div class="form-check">
-                    <label for="gps">GPS</label>
-                    <select style="width: 100px;border: 1px solid #cccccc;border-radius: 3px;" id="gps" name="gps">
-                        <option gps="1">Нету</option>
-                        <option gps="2">Есть</option>
-                    </select>
-                </div-->
-
                 <div class="form-check" style="text-align: center">
                     <b>GPS</b><br>
-                    <input class="form-check-input" name="group100" type="radio" id="gps_1">
-                    <label class="form-check-label" for="radio100">Есть</label><br>
-                    <input class="form-check-input" name="group100" type="radio" id="gps_0">
-                    <label class="form-check-label" for="radio100">Нету</label><br>
+                    <input class="form-check-input" name="gps" type="radio" id="gps_1" value="Есть">
+                    <label class="form-check-label" for="gps_1">Есть</label><br>
+                    <input class="form-check-input" name="gps" type="radio" id="gps_0" value="Нету">
+                    <label class="form-check-label" for="gps_0">Нету</label><br>
                 </div>
-
             </div>
-
-            <!--div class="col-md-3">
-                <div class="form-group">
-                    <label for="loading_method">Способ погрузки</label>
-                    <select class="selectpicker" style="width: 100px;border: 1px solid #cccccc;border-radius: 3px;" id="loading_method">
-                        <option>Боковая</option>
-                        <option>Верхняя</option>
-                        <option>Задняя</option>
-                    </select>
-                </div>
-            </div-->
 
             <div class="col-md-3">
                 <div class="form-check" style="text-align: center">
                     <b>Способ погрузки</b><br>
-                    <input class="form-check-input" name="group100" type="radio" id="loading_method_1">
-                    <label class="form-check-label" for="radio100">Боковая</label><br>
-                    <input class="form-check-input" name="group100" type="radio" id="loading_method_2">
-                    <label class="form-check-label" for="radio100">Верхняя</label><br>
-                    <input class="form-check-input" name="group100" type="radio" id="loading_method_3">
-                    <label class="form-check-label" for="radio100">Задняя</label>
+                    <input class="form-check-input" name="loading_method" type="radio" id="loading_method_1" value="Боковая">
+                    <label class="form-check-label" for="loading_method_1">Боковая</label><br>
+                    <input class="form-check-input" name="loading_method" type="radio" id="loading_method_2" value="Верхняя">
+                    <label class="form-check-label" for="loading_method_2">Верхняя</label><br>
+                    <input class="form-check-input" name="loading_method" type="radio" id="loading_method_3" value="Задняя">
+                    <label class="form-check-label" for="loading_method_3">Задняя</label>
                 </div>
             </div>
 
             <div class="col-md-3">
                 <div class="form-check" style="text-align: center">
                     <b>Статус заявки</b><br>
-                    <input class="form-check-input" name="group100" type="radio" id="radio100">
-                    <label class="form-check-label" for="radio100">Открыта</label><br>
-                    <input class="form-check-input" name="group100" type="radio" id="radio102">
-                    <label class="form-check-label" for="radio100">Закрыта</label>
+                    <input class="form-check-input" name="request_status" type="radio" id="request_status" value="Открыта">
+                    <label class="form-check-label" for="request_status">Открыта</label><br>
+                    <input class="form-check-input" name="request_status" type="radio" id="request_status2" value="Закрыта">
+                    <label class="form-check-label" for="request_status2">Закрыта</label>
                 </div>
             </div>
-
-
-
         </div>
-
-
 
         <button type="button" class="btn btn-success add-new-order">Добавить</button>
     </form>
@@ -312,7 +188,7 @@
 <script src="<c:url value="/resources/js/jquery.js" />"></script>
 <script src="<c:url value="/resources/js/bootstrap.js" />"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="<c:url value="/resources/js/script.js" />"></script>
+<script src="<c:url value="/resources/js/carrier/script.js" />"></script>
 
 <script>
     $(function() {

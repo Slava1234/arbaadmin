@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "arbaadmin_currier_company")
+@Table(name = "arbaadmin_carrier_company")
 public class CarrierCompany {
 
     @Id

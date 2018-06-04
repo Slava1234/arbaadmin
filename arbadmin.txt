@@ -44,7 +44,7 @@ company_id integer
 // currier
 
 
-CREATE TABLE arbaadmin_currier_company(
+CREATE TABLE arbaadmin_carrier_company(
 id bigserial primary key,
 company_name varchar(200),
 company_city varchar(200),
@@ -55,7 +55,7 @@ site varchar(200),
 bin_iin varchar(200)
 );
 
-CREATE TABLE arbaadmin_currier_order(
+CREATE TABLE arbaadmin_carrier_order(
 id bigserial primary key,
 request_status varchar(100),
 direction_to varchar(250),

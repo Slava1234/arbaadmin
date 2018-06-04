@@ -12,7 +12,7 @@
 <body>
 
 <div class="container col-md-6 col-md-offset-3">
-    <a style="margin-top: 5px;" href="${pageContext.request.contextPath}/"  class="btn btn-primary">Назад1</a><br><br>
+    <a style="margin-top: 5px;" href="${pageContext.request.contextPath}/"  class="btn btn-primary">Назад</a><br><br>
     <form method="post" action="${pageContext.request.contextPath}/carrier/add-company-post" modelAttribute="Company">
 
         <div class="form-group">

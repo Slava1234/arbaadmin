@@ -33,5 +33,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.es6.min.js"></script>
 <script src="<c:url value="/resources/js/script.js" />"></script>
 
+
 </body>
 </html>

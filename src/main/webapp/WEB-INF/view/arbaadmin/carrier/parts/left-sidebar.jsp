@@ -21,7 +21,7 @@
                          src="<c:url value="/resources/img/show-property.png" />"/>
                 </th>
                 <th class="text-size-14 font-size-13" scope="col">
-                    <a href="${pageContext.request.contextPath}/company/${company.id}">
+                    <a href="${pageContext.request.contextPath}/carrier/company/${company.id}">
                             ${company.company_name}
                         <span class="badge">
                                 ${company.orders.size()}

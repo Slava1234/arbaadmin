@@ -2,6 +2,7 @@ package ru.arbaadmin.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -11,6 +12,7 @@ import ru.arbaadmin.model.carrier.CarrierCompany;
 import ru.arbaadmin.model.carrier.CarrierOrder;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 @Controller
 @RequestMapping(value = "/carrier")
@@ -37,14 +39,9 @@ public class CarrierController {
 
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)
-    public String index() {
-        return "arbaadmin/carrier/index";
-    }
-
-    @RequestMapping(value = "/company", method = RequestMethod.GET)
-    public ModelAndView company() {
+    public ModelAndView index() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("arbaadmin/customer/index");
+        modelAndView.setViewName("arbaadmin/carrier/index");
 
         //Company company = this.companyServiceImpl.getCompanyById(1);
         // modelAndView.addObject("company", company);
@@ -56,6 +53,21 @@ public class CarrierController {
         return modelAndView;
     }
 
+    /*@RequestMapping(value = "/company", method = RequestMethod.GET)
+    public ModelAndView company() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("arbaadmin/carrier/index");
+
+        //Company company = this.companyServiceImpl.getCompanyById(1);
+        // modelAndView.addObject("company", company);
+
+        List<CarrierCompany> companies = this.companyServiceImpl.listCompany();
+
+        modelAndView.addObject("companies", companies);
+
+        return modelAndView;
+    }*/
+
 
     @RequestMapping(value = "/company/{id}", method = RequestMethod.GET)
     public ModelAndView companyOrders(@PathVariable("id") int id) {
@@ -65,7 +77,7 @@ public class CarrierController {
         List<CarrierCompany> companies = this.companyServiceImpl.listCompany();
 
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("arbaadmin/customer/company");
+        modelAndView.setViewName("arbaadmin/carrier/company");
 
         modelAndView.addObject("orders", orders);
         modelAndView.addObject("company", company);
@@ -79,7 +91,7 @@ public class CarrierController {
     @RequestMapping(value = "/add-order", method = RequestMethod.GET)
     public ModelAndView addNewOrder(@RequestParam("id") int id) {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("arbaadmin/customer/add_order");
+        modelAndView.setViewName("arbaadmin/carrier/add_order");
 
         CarrierCompany company = this.companyServiceImpl.getCompanyById(id);
         // todo fix this trash
@@ -110,9 +122,9 @@ public class CarrierController {
             @RequestParam(value = "payment_method", required = false) String payment_method,
             @RequestParam(value = "loading_method", required = false) String loading_method,
             @RequestParam(value = "type_of_transport", required = false) String type_of_transport,
-            @RequestParam(value = "percentage_of_round_trip", required = false) String percentage_of_round_trip
+            @RequestParam(value = "percentage_of_round_trip", required = false) String percentage_of_round_trip,
+            @RequestParam(value = "customer_price", required = false) String customer_price
     ) {
-
 
         CarrierOrder order = new CarrierOrder();
         order.setDirection_from(direction_from);
@@ -132,10 +144,10 @@ public class CarrierController {
         order.setLoading_method(loading_method);
         order.setType_of_transport(type_of_transport);
         order.setPercentage_of_round_trip(percentage_of_round_trip);
+        order.setCustomer_price(customer_price);
 
         CarrierCompany company = this.companyServiceImpl.getCompanyById(company_id);
         order.setCompanies(company);
-
 
         this.orderServiceImpl.addOrder(order);
 
@@ -166,7 +178,8 @@ public class CarrierController {
             @RequestParam(value = "payment_method", required = false) String payment_method,
             @RequestParam(value = "loading_method", required = false) String loading_method,
             @RequestParam(value = "type_of_transport", required = false) String type_of_transport,
-            @RequestParam(value = "percentage_of_round_trip", required = false) String percentage_of_round_trip
+            @RequestParam(value = "percentage_of_round_trip", required = false) String percentage_of_round_trip,
+            @RequestParam(value = "customer_price", required = false) String customer_price
     ) {
 
 
@@ -189,6 +202,7 @@ public class CarrierController {
         order.setLoading_method(loading_method);
         order.setType_of_transport(type_of_transport);
         order.setPercentage_of_round_trip(percentage_of_round_trip);
+        order.setCustomer_price(customer_price);
 
         CarrierCompany company = this.companyServiceImpl.getCompanyById(company_id);
         order.setCompanies(company);
@@ -275,23 +289,6 @@ public class CarrierController {
     }
 
 
-    /**
-     * Testing purpose
-     */
-    private class Test {
-        private String name;
-        private String age;
-
-
-
-    }
-
-    @RequestMapping(value = "/test", method = RequestMethod.POST, headers="Accept=application/json")
-    @ResponseBody
-    public Test test(@RequestBody Test test) {
-
-        return test;
-    }
 
 
 

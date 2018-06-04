@@ -4,7 +4,7 @@ package ru.arbaadmin.model.carrier;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "arbaadmin_currier_order")
+@Table(name = "arbaadmin_carrier_order")
 public class CarrierOrder {
 
     @Id
