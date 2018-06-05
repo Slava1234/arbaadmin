@@ -89,7 +89,12 @@ public class CustomerOrder {
     private CustomerCompany companies;
 
 
+    private String getClassName() {
+        return this.getClass().getName();
+    }
+
     // Methods
+
 
 
     public Integer getId() {

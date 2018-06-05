@@ -34,7 +34,7 @@ number_of_requested_cars varchar(100),
 loading_method varchar(100),
 type_of_transport varchar(100),
 calculator varchar(100),
-carrier_price varchar(250), 
+customer_price varchar(250),
 percentage_of_round_trip varchar(50),
 company_id integer
 );

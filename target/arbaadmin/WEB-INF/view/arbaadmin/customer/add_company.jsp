@@ -13,7 +13,7 @@
 
 <div class="container col-md-6 col-md-offset-3">
     <a style="margin-top: 5px;" href="${pageContext.request.contextPath}/" class="btn btn-primary">Назад</a><br><br>
-    <form method="post" action="${pageContext.request.contextPath}/add-company-post" modelAttribute="Company">
+    <form method="post" action="${pageContext.request.contextPath}/customer/add-company-post" modelAttribute="Company">
 
         <div class="form-group">
             <label for="company_name">Название компании</label>

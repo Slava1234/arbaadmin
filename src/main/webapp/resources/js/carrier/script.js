@@ -215,8 +215,6 @@ $(function () {
                 //request_status.attr().attr("selected", "selected");
 
 
-
-
                 // set request_status
 
                 if (response.request_status == "Открыта") {
@@ -461,7 +459,7 @@ $(function () {
 
         modal = $('#updateOrder');
         request_status = $("input[name='request_status']:checked");
-        gps = modal.find("#gps option:selected");
+        gps = modal.find("input[name='gps']:checked");
         currency = modal.find("input[name='currency']:checked");
         payment_method = modal.find("#payment_method option:selected");
         loading_method = modal.find("input[name='loading_method']:checked");
@@ -635,7 +633,3 @@ $(function () {
 
 
 });
-
-
-
-

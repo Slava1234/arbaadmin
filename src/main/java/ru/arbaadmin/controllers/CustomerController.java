@@ -32,10 +32,6 @@ public class CustomerController {
         this.orderServiceImpl = orderServiceImpl;
     }
 
-
-
-
-
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public ModelAndView company() {
         ModelAndView modelAndView = new ModelAndView();
@@ -227,7 +223,7 @@ public class CustomerController {
     @RequestMapping(value = "/add-company-post", method = RequestMethod.POST)
     public String addNewCompanyPost(@ModelAttribute("Company") CustomerCompany company) {
         this.companyServiceImpl.addCompany(company);
-        return "redirect:/";
+        return "redirect:/customer/main";
     }
 
     @RequestMapping(value = "/ajax_get_company", method = RequestMethod.POST)

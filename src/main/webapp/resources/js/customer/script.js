@@ -328,7 +328,7 @@ $(function () {
 
         $.ajax({
             // todo check this url
-            url: serverAddress+'ajax_get_company',
+            url: serverAddress+'customer/ajax_get_company',
             type: 'POST',
             data: {
                 id: id
@@ -374,7 +374,7 @@ $(function () {
 
         if ($(this).hasClass("ready_to_update_company")) {
             $.ajax({
-                url: serverAddress + 'ajax_update_company',
+                url: serverAddress + 'customer/ajax_update_company',
                 type: 'POST',
                 data: {
                     id: id,
@@ -388,7 +388,7 @@ $(function () {
                 },
                 success: function (response) {
                     if (response == "true") {
-                        alert("Компания обноалена")
+                        alert("Компания обновлена")
                         location.reload();
                     }
                 },
@@ -453,8 +453,6 @@ $(function () {
     var payment_method;
     var loading_method;
     var type_of_transport;
-
-
     var direction_to;
     var direction_from;
     var km;
@@ -470,7 +468,7 @@ $(function () {
     var cost_of_transportation;
     var number_of_requested_cars;
     var calculator;
-    var carrier_price;
+    var customer_price;
     var percentage_of_round_trip;
 
 
@@ -481,17 +479,16 @@ $(function () {
 
 
         modal = $('#updateOrder');
-        request_status = modal.find("#request_status option:selected");
+        request_status = $("input[name='request_status']:checked").val();
         gps = modal.find("#gps option:selected");
         currency = modal.find("#currency option:selected");
         payment_method = modal.find("#payment_method option:selected");
         loading_method = modal.find("#loading_method option:selected");
         type_of_transport = modal.find("#type_of_transport option:selected");
-
         direction_to = modal.find("input[name='direction_to']");
         direction_from = modal.find("input[name='direction_from']");
         km = modal.find("input[name='km']");
-        description_of_cargo = modal.find("input[name='description_of_cargo']");
+        description_of_cargo = modal.find("textarea[name='description_of_cargo']");
         weight = modal.find("input[name='weight']");
         volume = modal.find("input[name='volume']");
         departure_date = modal.find("input[name='departure_date']");
@@ -503,16 +500,15 @@ $(function () {
         cost_of_transportation = modal.find("input[name='cost_of_transportation']");
         number_of_requested_cars = modal.find("input[name='number_of_requested_cars']");
         calculator = modal.find("input[name='calculator']");
-        carrier_price = modal.find("input[name='carrier_price']");
+        customer_price = modal.find("input[name='customer_price']");
         percentage_of_round_trip = modal.find("input[name='percentage_of_round_trip']");
-
 
         orderId = $(this).closest("tr").find('.order-id').text();
         company_id = $(this).closest("tr").find('.company_id').text();
 
         $.ajax({
             // todo fix this to url independent structure
-            url: serverAddress+'ajax-get-order',
+            url: serverAddress+'customer/ajax-get-order',
             type: 'POST',
             data: {
                 orderId: orderId
@@ -526,43 +522,41 @@ $(function () {
                 modal.find("*[request_status='2']").attr("selected", "selected");
 
                 // set request_status
-
                 if (response.request_status == "Открыта") {
-                    modal.find("*[request_status='1']").attr("selected", "selected");
-                    modal.find("*[request_status='2']").removeAttr("selected");
+                    modal.find("#request_status").prop('checked', true);
+                    modal.find("#request_status2").prop('checked', false);
                 } else if (response.request_status == "Закрыта") {
-                    modal.find("*[request_status='1']").removeAttr("selected");
-                    modal.find("*[request_status='2']").attr("selected", "selected");
+                    modal.find("#request_status").prop('checked', false);
+                    modal.find("#request_status2").prop('checked', true);
                 } else {
-                    modal.find("*[request_status='0']").attr("selected", "selected");
-                    modal.find("*[request_status='1']").removeAttr("selected");
-                    modal.find("*[request_status='2']").removeAttr("selected");
+                    modal.find("#request_status").prop('checked', false);
+                    modal.find("#request_status2").prop('checked', false);
                 }
 
                 // set gps
-                if (response.gps == "true") {
-                    modal.find("*[gps='2']").attr("selected", "selected");
-                    modal.find("*[gps='1']").removeAttr("selected");
+                if (response.gps == "Есть") {
+                    modal.find("#gps_1").prop('checked', true);
+                    modal.find("#gps_2").prop('checked', false);
                 } else {
-                    modal.find("*[gps='2']").removeAttr("selected");
-                    modal.find("*[gps='1']").attr("selected", "selected");
+                    modal.find("#gps_1").prop('checked', false);
+                    modal.find("#gps_2").prop('checked', true);
                 }
 
                 // set currency
                 if (response.currency == "KZT") {
-                    modal.find("*[currency='1']").attr("selected", "selected");
-                    modal.find("*[currency='2']").removeAttr("selected");
-                    modal.find("*[currency='3']").removeAttr("selected");
+                    modal.find("#currency_KZT").prop('checked', true);
+                    modal.find("#currency_RUB").prop('checked', false);
+                    modal.find("#currency_USD").prop('checked', false);
                 }
                 if (response.currency == "RUB") {
-                    modal.find("*[currency='2']").attr("selected", "selected");
-                    modal.find("*[currency='1']").removeAttr("selected");
-                    modal.find("*[currency='3']").removeAttr("selected");
+                    modal.find("#currency_KZT").prop('checked', false);
+                    modal.find("#currency_RUB").prop('checked', true);
+                    modal.find("#currency_USD").prop('checked', false);
                 }
                 if (response.currency == "USD") {
-                    modal.find("*[currency='3']").attr("selected", "selected");
-                    modal.find("*[currency='1']").removeAttr("selected");
-                    modal.find("*[currency='2']").removeAttr("selected");
+                    modal.find("#currency_KZT").prop('checked', false);
+                    modal.find("#currency_RUB").prop('checked', false);
+                    modal.find("#currency_USD").prop('checked', true);
                 }
 
 
@@ -618,19 +612,19 @@ $(function () {
 
                 // set loading_method
                 if (response.loading_method == "Боковая") {
-                    modal.find("*[loading_method='1']").attr("selected", "selected");
-                    modal.find("*[loading_method='2']").removeAttr("selected");
-                    modal.find("*[loading_method='3']").removeAttr("selected");
+                    modal.find("#loading_method_1").prop('checked', true);
+                    modal.find("#loading_method_2").prop('checked', false);
+                    modal.find("#loading_method_3").prop('checked', false);
                 }
                 if (response.loading_method == "Верхняя") {
-                    modal.find("*[loading_method='2']").attr("selected", "selected");
-                    modal.find("*[loading_method='1']").removeAttr("selected");
-                    modal.find("*[loading_method='3']").removeAttr("selected");
+                    modal.find("#loading_method_1").prop('checked', false);
+                    modal.find("#loading_method_2").prop('checked', true);
+                    modal.find("#loading_method_3").prop('checked', false);
                 }
                 if (response.loading_method == "Задняя") {
-                    modal.find("*[loading_method='3']").attr("selected", "selected");
-                    modal.find("*[loading_method='1']").removeAttr("selected");
-                    modal.find("*[loading_method='2']").removeAttr("selected");
+                    modal.find("#loading_method_1").prop('checked', false);
+                    modal.find("#loading_method_2").prop('checked', false);
+                    modal.find("#loading_method_3").prop('checked', true);
                 }
 
 
@@ -736,19 +730,17 @@ $(function () {
                 }
 
 
+
+
                 direction_to.val(response.direction_to);
                 direction_from.val(response.direction_from);
                 km.val(response.km);
-                description_of_cargo.val(response.description_of_cargo);
+                description_of_cargo.text(response.description_of_cargo);
                 weight.val(response.weight);
                 volume.val(response.volume);
                 departure_date.val(response.departure_date);
                 delivery_date.val(response.delivery_date);
-                driver_full_name.val(response.driver_full_name);
-                driver_phone.val(response.driver_phone);
                 gps.val(response.gps);
-                brand_of_machine.val(response.brand_of_machine);
-                car_number.val(response.car_number);
                 cost_of_transportation.val(response.cost_of_transportation);
                 currency.val(response.currency);
                 payment_method.val(response.payment_method);
@@ -756,7 +748,7 @@ $(function () {
                 loading_method.val(response.loading_method);
                 type_of_transport.val(response.type_of_transport);
                 calculator.val(response.calculator);
-                carrier_price.val(response.carrier_price);
+                customer_price.val(response.customer_price);
                 percentage_of_round_trip.val(response.percentage_of_round_trip);
             },
             error: function (error) {
@@ -771,17 +763,17 @@ $(function () {
     $('.update-order-ready').click(function () {
 
         modal = $('#updateOrder');
-        request_status = modal.find("#request_status option:selected");
-        gps = modal.find("#gps option:selected");
-        currency = modal.find("#currency option:selected");
+        request_status = $("input[name='request_status']:checked");
+        gps = modal.find("input[name='gps']:checked");
+        currency = modal.find("input[name='currency']:checked");
         payment_method = modal.find("#payment_method option:selected");
-        loading_method = modal.find("#loading_method option:selected");
+        loading_method = modal.find("input[name='loading_method']:checked");
         type_of_transport = modal.find("#type_of_transport option:selected");
 
         direction_to = modal.find("input[name='direction_to']");
         direction_from = modal.find("input[name='direction_from']");
         km = modal.find("input[name='km']");
-        description_of_cargo = modal.find("input[name='description_of_cargo']");
+        description_of_cargo = modal.find("textarea[name='description_of_cargo']");
         weight = modal.find("input[name='weight']");
         volume = modal.find("input[name='volume']");
         departure_date = modal.find("input[name='departure_date']");
@@ -793,30 +785,21 @@ $(function () {
         cost_of_transportation = modal.find("input[name='cost_of_transportation']");
         number_of_requested_cars = modal.find("input[name='number_of_requested_cars']");
         calculator = modal.find("input[name='calculator']");
-        carrier_price = modal.find("input[name='carrier_price']");
+        customer_price = modal.find("input[name='customer_price']");
         percentage_of_round_trip = modal.find("input[name='percentage_of_round_trip']");
-
 
         var id = orderId;
         var companyId = company_id;
 
-        console.log("request_status " + request_status.text());
-        console.log("gps " + gps.text());
-        console.log("currency " + currency.text());
-        console.log("payment_method " + payment_method.text());
-        console.log("loading_method " + loading_method.text());
-        console.log("type_of_transport " + type_of_transport.text());
-        alert(direction_to.val());
-        alert(request_status.text());
 
         $.ajax({
             // todo fix this to url independent structure
-            url: serverAddress+ 'update-order',
+            url: serverAddress+ 'customer/update-order',
             type: 'POST',
             data: {
                 order_id: id,
                 company_id: companyId,
-                request_status: request_status.text(),
+                request_status: request_status.val(),
                 direction_to: direction_to.val(),
                 direction_from: direction_from.val(),
                 km: km.val(),
@@ -827,17 +810,17 @@ $(function () {
                 delivery_date: delivery_date.val(),
                 driver_full_name: driver_full_name.val(),
                 driver_phone: driver_phone.val(),
-                gps: gps.text(),
+                gps: gps.val(),
                 brand_of_machine: brand_of_machine.val(),
                 car_number: car_number.val(),
                 cost_of_transportation: cost_of_transportation.val(),
-                currency: currency.text(),
-                payment_method: payment_method.text(),
+                currency: currency.val(),
+                payment_method: payment_method.val(),
                 number_of_requested_cars: number_of_requested_cars.val(),
-                loading_method: loading_method.text(),
-                type_of_transport: type_of_transport.text(),
+                loading_method: loading_method.val(),
+                type_of_transport: type_of_transport.val(),
                 calculator: calculator.val(),
-                carrier_price: carrier_price.val(),
+                customer_price: customer_price.val(),
                 percentage_of_round_trip: percentage_of_round_trip.val()
 
             },
@@ -865,7 +848,7 @@ $(function () {
 
         $.ajax({
             // todo fix this to url independent structure
-            url: serverAddress+'ajax-delete-order',
+            url: serverAddress+'customer/ajax-delete-order',
             type: 'POST',
             data: {
                 id: orderIdToDelete
@@ -888,8 +871,8 @@ $(function () {
         var company_id = $("input[name='company_id']").val();
         var direction_from = $("input[name='direction_from']").val();
         var direction_to = $("input[name='direction_to']").val();
-        var request_status = $("#request_status option:selected").text();
-        var description_of_cargo = $("input[name='description_of_cargo']").val();
+        var request_status = $("input[name='request_status']:checked").val();
+        var description_of_cargo = $("textarea[name='description_of_cargo']").val();
         var weight = $("input[name='weight']").val();
         var volume = $("input[name='volume']").val();
         var number_of_requested_cars = $("input[name='number_of_requested_cars']").val();
@@ -897,22 +880,23 @@ $(function () {
         var departure_date = $("input[name='departure_date']").val();
         var delivery_date = $("input[name='delivery_date']").val();
         var driver_full_name = $("input[name='driver_full_name']").val();
-        var gps = $("#gps option:selected").text();
+        var gps = $("input[name='gps']:checked").val();
         var driver_phone = $("input[name='driver_phone']").val();
         var vehicle_type1 = $("input[name='vehicle_type1']").val();
         var car_number = $("input[name='car_number']").val();
         var cost_of_transportation = $("input[name='cost_of_transportation']").val();
-        var currency = $("#currency option:selected").text();
+        var currency = $("input[name='currency']:checked").val();
         var payment_method = $("#payment_method option:selected").text();
-        var loading_method = $("#loading_method option:selected").text();
+        var loading_method = $("input[name='loading_method']:checked").val();
         var type_of_transport = $("#type_of_transport option:selected").text();
-        var carrier_price = $("input[name='carrier_price']").val();
+        var customer_price = $("input[name='customer_price']").val();
         var percentage_of_round_trip = $("input[name='percentage_of_round_trip']").val();
+
 
 
         $.ajax({
             // todo fix this to url independent structure
-            url: serverAddress+'add-new-order',
+            url: serverAddress+'/customer/add-new-order',
             type: 'POST',
             data: {
                 company_id: company_id,
@@ -936,7 +920,7 @@ $(function () {
                 payment_method: payment_method,
                 loading_method: loading_method,
                 type_of_transport: type_of_transport,
-                carrier_price: carrier_price,
+                customer_price: customer_price,
                 percentage_of_round_trip: percentage_of_round_trip
             },
             success: function (response) {
@@ -952,35 +936,6 @@ $(function () {
     });
 
 
-
-
-
-
-
-    var test = {
-        name: "simon",
-        age: "23"
-    };
-
-    /*$.ajax({
-        // todo check this url
-        url: 'http://localhost:8080/arbaadmin/test',
-        contentType: "application/json; charset=utf-8",
-        type: 'POST',
-        processData:false,
-        cache: false,
-        async: false,
-        data: {
-            test: JSON.stringify(test)
-        },
-        success: function (response) {
-            console.log(response.name);
-
-        },
-        error: function (error) {
-            console.log("error! " + error);
-        }
-    });*/
 
 
 

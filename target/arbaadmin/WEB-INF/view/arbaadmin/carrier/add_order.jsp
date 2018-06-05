@@ -35,7 +35,6 @@
 
         <div class="form-group">
             <label for="description_of_cargo">Описание груза</label>
-            <!--input name="description_of_cargo" type="text" class="form-control" id="description_of_cargo" placeholder="Описание груза"-->
             <textarea class="form-control" name="description_of_cargo" id="description_of_cargo" cols="30" rows="6" placeholder="Описание груза"></textarea>
         </div>
 

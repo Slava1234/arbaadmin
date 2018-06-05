@@ -2,7 +2,7 @@
 
 
 <nav class="nav-sidebar left-company-list col-md-3">
-    <a class="btn btn-default btn-sm" href="${pageContext.request.contextPath}/carrier/add-company"
+    <a class="btn btn-default btn-sm" href="${pageContext.request.contextPath}/customer/add-company"
        style="margin-top: 5px;margin-bottom: 10px;">Добавить компанию</a>
 
     <table class="table table-striped">
@@ -21,7 +21,7 @@
                          src="<c:url value="/resources/img/show-property.png" />"/>
                 </th>
                 <th class="text-size-14 font-size-13" scope="col">
-                    <a href="${pageContext.request.contextPath}/carrier/company/${company.id}">
+                    <a href="${pageContext.request.contextPath}/customer/company/${company.id}">
                             ${company.company_name}
                         <span class="badge">
                                 ${company.orders.size()}

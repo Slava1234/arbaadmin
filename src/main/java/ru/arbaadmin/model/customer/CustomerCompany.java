@@ -43,6 +43,10 @@ public class CustomerCompany {
     // Methods
 
 
+    public void setOrders(List<CustomerOrder> orders) {
+        this.orders = orders;
+    }
+
     public List<CustomerOrder> getOrders() {
         return this.orders;
     }

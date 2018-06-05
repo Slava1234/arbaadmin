@@ -42,14 +42,8 @@ public class CarrierController {
     public ModelAndView index() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("arbaadmin/carrier/index");
-
-        //Company company = this.companyServiceImpl.getCompanyById(1);
-        // modelAndView.addObject("company", company);
-
         List<CarrierCompany> companies = this.companyServiceImpl.listCompany();
-
         modelAndView.addObject("companies", companies);
-
         return modelAndView;
     }
 
