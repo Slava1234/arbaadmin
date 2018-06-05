@@ -13,6 +13,10 @@ import ru.arbaadmin.dao.customer.CustomerCompanyDao;
 import ru.arbaadmin.dao.customer.CustomerOrderDao;
 import ru.arbaadmin.model.User;
 
+import java.io.UnsupportedEncodingException;
+import java.security.*;
+import java.util.logging.Logger;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -20,6 +24,10 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class MainController {
 
+    Logger logger = Logger.getLogger(this.getClass().getName());
+
+    private final String f1 = "111";
+    private final String f2 = "8164";
 
     private UserDao userDao;
 
@@ -46,8 +54,15 @@ public class MainController {
 
     @RequestMapping(value = "/t", method = RequestMethod.GET)
     @ResponseBody
-    public StringBuffer t(HttpServletRequest request) {
-        return request.getRequestURL();
+    public String t(HttpServletRequest request) {
+
+        String c = f1+"arba778".hashCode()+f2;
+        if(c.equals("111-7492835448164"))
+            return "treu";
+        else {
+            return "false";
+        }
+
     }
 
 
@@ -56,16 +71,15 @@ public class MainController {
     @RequestMapping(value = "/check-auth", method = RequestMethod.POST)
     public String checkCurrier(@RequestParam("login") String login, @RequestParam("password") String password, HttpServletRequest request) {
 
-        User user = this.userDao.checkAuth(login, password);
+        String cPass = f1+password.hashCode()+f2;
 
+        User user = this.userDao.checkAuth(login, cPass);
         HttpSession session = request.getSession();
-
 
         if (user != null)
             session.setAttribute("user", user);
         else
             return "redirect:/auth";
-
 
         return "redirect:/" + user.getRole().toLowerCase() + "/main";
 

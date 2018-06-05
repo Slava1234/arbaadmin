@@ -121,18 +121,18 @@
     </bean>
 
 
-    <!-- Interceptors
+    <!-- Interceptors -->
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/carrier/*" />
-            <mvc:mapping path="/customer/*" />
+            <mvc:mapping path="/carrier/**" />
+            <mvc:mapping path="/customer/**" />
             <mvc:exclude-mapping path="/auth"/>
             <mvc:exclude-mapping path="/check-auth"/>
             <mvc:exclude-mapping path="/t"/>
             <bean class="ru.arbaadmin.interceptors.AuthInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>
--->
+
 
 
 </beans>

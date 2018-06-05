@@ -88,9 +88,13 @@ password varchar(100),
 role varchar(100)
 );
 
+carrier
+login: arba
+pass: arba778
 
-
-
+customer
+login: arba
+pass: arba221
 
 
 
