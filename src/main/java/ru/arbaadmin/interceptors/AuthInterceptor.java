@@ -1,26 +1,49 @@
 package ru.arbaadmin.interceptors;
 
 
-public class AuthInterceptor /*extends HandlerInterceptorAdapter*/ {
-   /* private static final Logger logger = LoggerFactory.getLogger(FileUploadController.class);
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import ru.arbaadmin.model.Roles;
+import ru.arbaadmin.model.User;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.logging.Logger;
+
+public class AuthInterceptor extends HandlerInterceptorAdapter {
+
+    Logger logger = Logger.getLogger(this.getClass().getName());
 
     @Override
-    public boolean preHandle(HttpServletRequest request,
-                             HttpServletResponse response, Object handler) throws Exception {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        String userIp =  request.getRemoteAddr();
+        StringBuffer direction = request.getRequestURL();
 
-        logger.info("User ip: " + userIp);
+        logger.info("url: " + direction.toString());
 
-        //Session session = new MapSession();
+        User user;
+
+        if (request.getSession().getAttribute("user") != null) {
+            user = (User) request.getSession().getAttribute("user");
+            logger.info("test " + user.getRole());
+            if(user.getRole().equals(Roles.CUSTOMER) ) {
+                logger.info("true" );
+                return true;
+            }
+
+
+        }
+
+            //return true;
+            //
+           // if (user.getRole().toLowerCase().equals())
+
+
 
 
 
 
         response.sendRedirect(request.getContextPath()+"/auth");
         return false;
-
-
         //return super.preHandle(request, response, handler);
-    }*/
+    }
 }

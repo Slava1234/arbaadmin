@@ -43,14 +43,14 @@
         <div class="col-md-12">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="weight">Вес</label>
+                    <label for="weight">Вес (10 кг / 20 тонн)</label>
                     <input name="weight" type="text" class="form-control" id="weight" placeholder="Вес">
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="volume">Объем</label>
+                    <label for="volume">Объем (3 км (м³) / 7 кс (см³) )</label>
                     <input name="volume" type="text" class="form-control" id="volume" placeholder="Объем">
                 </div>
             </div>
@@ -65,7 +65,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="km">Расстояние</label>
+                    <label for="km">Расстояние (500 км / 800 м)</label>
                     <input type="text" name="km"  class="form-control" id="km" placeholder="Расстояние">
                 </div>
             </div>
@@ -216,10 +216,15 @@
 
 </div>
 
+
 <script src="<c:url value="/resources/js/jquery.js" />"></script>
 <script src="<c:url value="/resources/js/bootstrap.js" />"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="<c:url value="/resources/js/customer/script.js" />"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
+
+
+
 
 <script>
     $(function() {
@@ -234,6 +239,8 @@
            // minDate: '@minDate'
         });
     });
+
+    $('#driver_phone').mask('0000-000-00-00');
 
 </script>
 </body>

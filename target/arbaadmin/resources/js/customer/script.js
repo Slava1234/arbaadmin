@@ -750,6 +750,12 @@ $(function () {
                 calculator.val(response.calculator);
                 customer_price.val(response.customer_price);
                 percentage_of_round_trip.val(response.percentage_of_round_trip);
+
+                driver_full_name.val(response.driver_full_name);
+                driver_phone.val(response.driver_phone);
+                brand_of_machine.val(response.car_brand);
+                car_number.val(response.car_number);
+
             },
             error: function (error) {
                 console.log("error! " + error);
@@ -790,7 +796,6 @@ $(function () {
 
         var id = orderId;
         var companyId = company_id;
-
 
         $.ajax({
             // todo fix this to url independent structure

@@ -78,3 +78,28 @@ customer_price varchar(250),
 percentage_of_round_trip varchar(50),
 company_id integer
 );
+
+
+// auth
+CREATE TABLE arbaadmin_auth(
+id bigserial primary key,
+login varchar(100),
+password varchar(100),
+role varchar(100)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

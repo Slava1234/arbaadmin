@@ -152,7 +152,7 @@ public class CustomerController {
             @RequestParam(value = "driver_full_name", required = false) String driver_full_name,
             @RequestParam(value = "gps", required = false) String gps,
             @RequestParam(value = "driver_phone", required = false) String driver_phone,
-            @RequestParam(value = "vehicle_type1", required = false) String vehicle_type1,
+            @RequestParam(value = "brand_of_machine", required = false) String brand_of_machine,
             @RequestParam(value = "car_number", required = false) String car_number,
             @RequestParam(value = "cost_of_transportation", required = false) String cost_of_transportation,
             @RequestParam(value = "currency", required = false) String currency,
@@ -179,7 +179,7 @@ public class CustomerController {
         order.setDriver_full_name(driver_full_name);
         order.setGps(gps);
         order.setDriver_phone(driver_phone);
-        order.setCar_brand(vehicle_type1);
+        order.setCar_brand(brand_of_machine);
         order.setCar_number(car_number);
         order.setCost_of_transportation(cost_of_transportation);
         order.setCurrency(currency);

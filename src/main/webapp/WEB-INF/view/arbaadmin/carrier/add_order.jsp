@@ -41,13 +41,13 @@
         <div class="col-md-12">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="weight">Вес</label>
+                    <label for="weight">Вес (10 кг / 20 тонн)</label>
                     <input name="weight" type="text" class="form-control" id="weight" placeholder="Вес">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="volume">Объем</label>
+                    <label for="volume">Объем (3 км (м³) / 7 кс (см³) )</label>
                     <input name="volume" type="text" class="form-control" id="volume" placeholder="Объем">
                 </div>
             </div>
@@ -62,7 +62,7 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="km">Расстояние</label>
+                    <label for="km">Расстояние (500 км / 800 м)</label>
                     <input type="text" name="km"  class="form-control" id="km" placeholder="Расстояние">
                 </div>
             </div>

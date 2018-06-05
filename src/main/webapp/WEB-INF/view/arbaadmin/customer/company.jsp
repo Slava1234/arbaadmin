@@ -329,6 +329,36 @@
                     </div>
                 </div>
 
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="driver_full_name">ФИО Водителя</label>
+                            <input type="text" name="driver_full_name" class="form-control" id="driver_full_name" placeholder="ФИО Водителя">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="driver_phone">Телефон водителя</label>
+                            <input name="driver_phone" type="text" class="form-control" id="driver_phone" placeholder="Телефон водителя">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="brand_of_machine">Марка Авто</label>
+                            <input name="brand_of_machine" type="text" class="form-control" id="brand_of_machine" placeholder="Марка Авто">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="car_number">Гос.номер авто</label>
+                            <input name="car_number" type="text" class="form-control" id="car_number" placeholder="Гос.номер авто">
+                        </div>
+                    </div>
+                </div>
+
                 <!-- select options below -->
                 <div class="col-md-12" style="margin: 10px 0 10px 0;">
                     <div class="col-md-6">
@@ -458,7 +488,7 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.es6.min.js"></script>
 <script src="<c:url value="/resources/js/customer/script.js" />"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
 
 <script>
     $('.preloader').fadeOut(500);
@@ -480,11 +510,8 @@
     });
 
 
-    // preloader
+    $('#driver_phone').mask('0000-000-00-00');
 
-
-
-    //arbaadmin
 
     var addOrderForCompany = $('.add-order-for-company');
 
@@ -492,17 +519,6 @@
 
         addOrderForCompany.show(100);
         addOrderForCompany.attr('company-id', 1);
-
-    });
-
-    addOrderForCompany.click(function () {
-        alert()
-    });
-
-
-
-
-    $(document).ready(function () {
 
     });
 

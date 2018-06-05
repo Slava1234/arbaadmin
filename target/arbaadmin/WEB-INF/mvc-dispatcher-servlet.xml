@@ -51,6 +51,8 @@
 
                 <value>ru.arbaadmin.model.customer.CustomerCompany</value>
                 <value>ru.arbaadmin.model.customer.CustomerOrder</value>
+
+                <value>ru.arbaadmin.model.User</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -100,8 +102,14 @@
         <property name="orderDao" ref="carrierOrderDao"/>
     </bean>
 
+    <!-- User injection -->
+    <bean id="userDao" class="ru.arbaadmin.dao.UserImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
 
-
+    <bean id="userServiceImpl" class="ru.arbaadmin.service.UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+    </bean>
 
 
 
@@ -113,14 +121,18 @@
     </bean>
 
 
-    <!-- Interceptors -->
-<!--
+    <!-- Interceptors
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/*" />
+            <mvc:mapping path="/carrier/*" />
+            <mvc:mapping path="/customer/*" />
             <mvc:exclude-mapping path="/auth"/>
-            <bean class="ru.sober.interceptors.AuthInterceptor" />
+            <mvc:exclude-mapping path="/check-auth"/>
+            <mvc:exclude-mapping path="/t"/>
+            <bean class="ru.arbaadmin.interceptors.AuthInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>
 -->
+
+
 </beans>
