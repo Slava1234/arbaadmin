@@ -19,8 +19,8 @@
 
 <div class="container col-md-12" style="text-align: center; padding-top: 218px;">
 
-    <a href="./customer/main" class="btn btn-default btn-lg">Заказчик</a>
-    <a href="./carrier/main" class="btn btn-default btn-lg">Перевозчик</a>
+    <a href="/arbaadmin/customer/main" class="btn btn-default btn-lg">Заказчик</a>
+    <a href="/arbaadmin/carrier/main" class="btn btn-default btn-lg">Перевозчик</a>
 
 </div>
 

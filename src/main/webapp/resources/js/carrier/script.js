@@ -118,14 +118,15 @@ $(function () {
         $('.view-company-delete-no').trigger('click');
 
         $.ajax({
-            url: serverAddress + '/ajax_delete_company',
+            url: serverAddress + '/carrier/ajax_delete_company',
             type: 'POST',
             data: {
                 id: id
             },
             success: function (response) {
                 if (response == "true") {
-                    alert("Компания удалена");
+                    console.log("Компания удалена");
+                    location.reload();
                 }
             },
             error: function (error) {
@@ -540,7 +541,7 @@ $(function () {
             },
             success: function (response) {
                 if (response == "true") {
-                    alert("Заявка удалена");
+                    console.log("Заявка удалена");
                     location.reload();
                 }
             },

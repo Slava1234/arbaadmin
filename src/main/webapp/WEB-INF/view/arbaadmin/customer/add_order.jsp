@@ -12,7 +12,7 @@
 <body>
 
 <div class="container col-md-6 col-md-offset-3">
-    <a style="margin-top: 5px;" href="${pageContext.request.contextPath}/carrier/main"  class="btn btn-primary">Назад</a><br><br>
+    <a style="margin-top: 5px;" href="${pageContext.request.contextPath}/customer/main"  class="btn btn-primary">Назад</a><br><br>
     <form>
 
         <h2>Заказ для компании "${company.company_name}"</h2>

@@ -16,6 +16,8 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        logger.info("user came through AuthInterceptor");
+
 
         String direction = request.getRequestURL().toString();
 
@@ -43,14 +45,6 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
 
         }
-
-            //return true;
-            //
-           // if (user.getRole().toLowerCase().equals())
-
-
-
-
 
 
         response.sendRedirect(request.getContextPath()+"/auth");

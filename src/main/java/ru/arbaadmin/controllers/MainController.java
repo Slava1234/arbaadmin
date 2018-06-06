@@ -57,11 +57,15 @@ public class MainController {
     public String t(HttpServletRequest request) {
 
         String c = f1+"arba778".hashCode()+f2;
-        if(c.equals("111-7492835448164"))
+
+        return c;
+
+
+        /*if(c.equals("111-7492835448164"))
             return "treu";
         else {
             return "false";
-        }
+        }*/
 
     }
 

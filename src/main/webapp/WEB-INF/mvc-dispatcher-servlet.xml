@@ -121,7 +121,7 @@
     </bean>
 
 
-    <!-- Interceptors -->
+    <!-- Interceptors
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/carrier/**" />
@@ -133,6 +133,6 @@
         </mvc:interceptor>
     </mvc:interceptors>
 
-
+-->
 
 </beans>
