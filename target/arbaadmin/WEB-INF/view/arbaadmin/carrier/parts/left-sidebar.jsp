@@ -4,6 +4,8 @@
 <nav class="nav-sidebar left-company-list col-md-3">
     <a class="btn btn-default btn-sm" href="${pageContext.request.contextPath}/carrier/add-company"
        style="margin-top: 5px;margin-bottom: 10px;">Добавить компанию</a>
+    <a class="btn btn-warning btn-sm" href="${pageContext.request.contextPath}/logout"
+       style="margin-top: 5px;margin-bottom: 10px;">Выйти</a>
 
     <table class="table table-striped">
         <thead>

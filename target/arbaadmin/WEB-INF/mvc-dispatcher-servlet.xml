@@ -37,8 +37,8 @@
         <property name="driverClassName" value="org.postgresql.Driver"/>
         <property name="url" value="jdbc:postgresql://localhost:5432/arbaadmin"/>
         <property name="username" value="postgres"/>
-        <!--property name="password" value="zxcv555"/-->
-        <property name="password" value="shuffle"/>
+        <property name="password" value="zxcv555"/>
+        <!--property name="password" value="shuffle"/-->
     </bean>
 
     <bean id="hibernate4AnnotatedSessionFactory"
@@ -121,7 +121,7 @@
     </bean>
 
 
-    <!-- Interceptors
+    <!-- Interceptors -->
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/carrier/**" />
@@ -129,10 +129,11 @@
             <mvc:exclude-mapping path="/auth"/>
             <mvc:exclude-mapping path="/check-auth"/>
             <mvc:exclude-mapping path="/t"/>
+            <mvc:exclude-mapping path="/logout"/>
             <bean class="ru.arbaadmin.interceptors.AuthInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>
 
--->
+
 
 </beans>

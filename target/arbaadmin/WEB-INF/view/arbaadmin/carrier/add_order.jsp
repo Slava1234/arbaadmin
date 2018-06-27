@@ -20,17 +20,17 @@
 
         <div class="form-group">
             <label for="direction_from">Откуда</label>
-            <input name="direction_from" type="text" class="form-control" id="direction_from" placeholder="Откуда">
+            <input maxlength="255" name="direction_from" type="text" class="form-control" id="direction_from" placeholder="Откуда">
         </div>
 
         <div class="form-group">
             <label for="direction_to">Куда</label>
-            <input name="direction_to" type="text" class="form-control" id="direction_to" placeholder="Куда">
+            <input maxlength="255" name="direction_to" type="text" class="form-control" id="direction_to" placeholder="Куда">
         </div>
 
         <div class="form-group">
             <label for="percentage_of_round_trip">% от туда и обратно</label>
-            <input name="percentage_of_round_trip" type="text" class="form-control" id="percentage_of_round_trip" placeholder="% от туда и обратно">
+            <input maxlength="255" name="percentage_of_round_trip" type="text" class="form-control" id="percentage_of_round_trip" placeholder="% от туда и обратно">
         </div>
 
         <div class="form-group">
@@ -42,13 +42,13 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="weight">Вес (10 кг / 20 тонн)</label>
-                    <input name="weight" type="text" class="form-control" id="weight" placeholder="Вес">
+                    <input name="weight" maxlength="255" type="text" class="form-control" id="weight" placeholder="Вес">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="volume">Объем (3 км (м³) / 7 кс (см³) )</label>
-                    <input name="volume" type="text" class="form-control" id="volume" placeholder="Объем">
+                    <input name="volume" maxlength="255" type="text" class="form-control" id="volume" placeholder="Объем">
                 </div>
             </div>
         </div>
@@ -57,13 +57,13 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="number_of_requested_cars">Кол-во запрашиваемого авто</label>
-                    <input type="text" name="number_of_requested_cars"  class="form-control" id="number_of_requested_cars" placeholder="Кол-во авто в автопарке">
+                    <input type="text" maxlength="255" name="number_of_requested_cars"  class="form-control" id="number_of_requested_cars" placeholder="Кол-во авто в автопарке">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="km">Расстояние (500 км / 800 м)</label>
-                    <input type="text" name="km"  class="form-control" id="km" placeholder="Расстояние">
+                    <input type="text" maxlength="255" name="km"  class="form-control" id="km" placeholder="Расстояние">
                 </div>
             </div>
         </div>
@@ -73,14 +73,14 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="departure_date">Дата Отправки</label>
-                    <input type="text" name="departure_date" class="form-control datepicker" id="departure_date" placeholder="Дата Отправки">
+                    <input type="text" maxlength="255" name="departure_date" class="form-control datepicker" id="departure_date" placeholder="Дата Отправки">
                 </div>
             </div>
             <div class="col-md-6">
 
                 <div class="form-group">
                     <label for="delivery_date">Дата Доставки</label>
-                    <input type="text" name="delivery_date" class="form-control datepicker" id="delivery_date" placeholder="Дата Доставки">
+                    <input type="text" maxlength="255" name="delivery_date" class="form-control datepicker" id="delivery_date" placeholder="Дата Доставки">
                 </div>
             </div>
         </div>
@@ -89,13 +89,13 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="cost_of_transportation">Стоимость перевозки</label>
-                    <input name="cost_of_transportation" type="text" class="form-control" id="cost_of_transportation" placeholder="Стоимость перевозки">
+                    <input maxlength="255" name="cost_of_transportation" type="text" class="form-control" id="cost_of_transportation" placeholder="Стоимость перевозки">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="customer_price">Стоимость заказчика</label>
-                    <input name="customer_price" type="text" class="form-control" id="customer_price" placeholder="Стоимость заказчика">
+                    <input maxlength="255" name="customer_price" type="text" class="form-control" id="customer_price" placeholder="Стоимость заказчика">
                 </div>
             </div>
         </div>

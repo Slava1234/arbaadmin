@@ -163,37 +163,37 @@
 
                 <div class="form-group">
                     <label for="view_company_name">Название компании</label>
-                    <input readonly name="view_company_name" type="text" class="form-control" id="view_company_name" placeholder="Название компании">
+                    <input maxlength="255" readonly name="view_company_name" type="text" class="form-control" id="view_company_name" placeholder="Название компании">
                 </div>
 
                 <div class="form-group">
                     <label for="view_company_city">Город</label>
-                    <input readonly name="view_company_city" type="text" class="form-control" id="view_company_city" placeholder="Город">
+                    <input maxlength="255" readonly name="view_company_city" type="text" class="form-control" id="view_company_city" placeholder="Город">
                 </div>
 
                 <div class="form-group">
                     <label for="view_company_address">Адрес</label>
-                    <input readonly name="view_company_address" type="text" class="form-control" id="view_company_address" placeholder="Город">
+                    <input maxlength="255" readonly name="view_company_address" type="text" class="form-control" id="view_company_address" placeholder="Город">
                 </div>
 
                 <div class="form-group">
                     <label for="view_contact_person">Контактное лицо</label>
-                    <input readonly name="view_contact_person" type="text" class="form-control" id="view_contact_person" placeholder="Город">
+                    <input maxlength="255" readonly name="view_contact_person" type="text" class="form-control" id="view_contact_person" placeholder="Город">
                 </div>
 
                 <div class="form-group">
                     <label for="view_phone">Телефон</label>
-                    <input readonly name="view_phone" type="text" class="form-control" id="view_phone" placeholder="Город">
+                    <input maxlength="255" readonly name="view_phone" type="text" class="form-control" id="view_phone" placeholder="Город">
                 </div>
 
                 <div class="form-group">
                     <label for="view_site">Сайт</label>
-                    <input readonly name="view_site" type="text" class="form-control" id="view_site" placeholder="Сайт">
+                    <input maxlength="255" readonly name="view_site" type="text" class="form-control" id="view_site" placeholder="Сайт">
                 </div>
 
                 <div class="form-group">
                     <label for="view_bin_iin">Бин/иин</label>
-                    <input readonly name="view_bin_iin" type="text" class="form-control" id="view_bin_iin" placeholder="Бин/иин">
+                    <input maxlength="255" readonly name="view_bin_iin" type="text" class="form-control" id="view_bin_iin" placeholder="Бин/иин">
                 </div>
 
                 <button class="btn btn-primary" name="update-company">Update</button>
@@ -248,17 +248,17 @@
 
                 <div class="form-group">
                     <label for="direction_from">Откуда</label>
-                    <input name="direction_from" type="text" class="form-control" id="direction_from" placeholder="Откуда">
+                    <input maxlength="255" name="direction_from" type="text" class="form-control" id="direction_from" placeholder="Откуда">
                 </div>
 
                 <div class="form-group">
                     <label for="direction_to">Куда</label>
-                    <input name="direction_to" type="text" class="form-control" id="direction_to" placeholder="Куда">
+                    <input maxlength="255" name="direction_to" type="text" class="form-control" id="direction_to" placeholder="Куда">
                 </div>
 
                 <div class="form-group">
                     <label for="percentage_of_round_trip">% от туда и обратно</label>
-                    <input name="percentage_of_round_trip" type="text" class="form-control" id="percentage_of_round_trip" placeholder="% от туда и обратно">
+                    <input maxlength="255" name="percentage_of_round_trip" type="text" class="form-control" id="percentage_of_round_trip" placeholder="% от туда и обратно">
                 </div>
 
                 <div class="form-group">
@@ -271,13 +271,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="weight">Вес</label>
-                            <input name="weight" type="text" class="form-control" id="weight" placeholder="Вес">
+                            <input name="weight" maxlength="255" type="text" class="form-control" id="weight" placeholder="Вес">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="volume">Объем</label>
-                            <input name="volume" type="text" class="form-control" id="volume" placeholder="Объем">
+                            <input name="volume" maxlength="255" type="text" class="form-control" id="volume" placeholder="Объем">
                         </div>
                     </div>
                 </div>
@@ -286,13 +286,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="number_of_requested_cars">Кол-во запрашиваемого авто</label>
-                            <input type="text" name="number_of_requested_cars"  class="form-control" id="number_of_requested_cars" placeholder="Кол-во авто в автопарке">
+                            <input type="text" maxlength="255" name="number_of_requested_cars"  class="form-control" id="number_of_requested_cars" placeholder="Кол-во авто в автопарке">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="km">Расстояние</label>
-                            <input type="text" name="km"  class="form-control" id="km" placeholder="Расстояние">
+                            <input type="text" maxlength="255" name="km"  class="form-control" id="km" placeholder="Расстояние">
                         </div>
                     </div>
                 </div>
@@ -302,14 +302,14 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="departure_date">Дата Отправки</label>
-                            <input type="text" name="departure_date" class="form-control datepicker" id="departure_date" placeholder="Дата Отправки">
+                            <input type="text" maxlength="255" name="departure_date" class="form-control datepicker" id="departure_date" placeholder="Дата Отправки">
                         </div>
                     </div>
                     <div class="col-md-6">
 
                         <div class="form-group">
                             <label for="delivery_date">Дата Доставки</label>
-                            <input type="text" name="delivery_date" class="form-control datepicker" id="delivery_date" placeholder="Дата Доставки">
+                            <input type="text" maxlength="255" name="delivery_date" class="form-control datepicker" id="delivery_date" placeholder="Дата Доставки">
                         </div>
                     </div>
                 </div>
@@ -318,13 +318,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="cost_of_transportation">Стоимость перевозки</label>
-                            <input name="cost_of_transportation" type="text" class="form-control" id="cost_of_transportation" placeholder="Стоимость перевозки">
+                            <input maxlength="255" name="cost_of_transportation" type="text" class="form-control" id="cost_of_transportation" placeholder="Стоимость перевозки">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="customer_price">Стоимость заказчика</label>
-                            <input name="customer_price" type="text" class="form-control" id="customer_price" placeholder="Стоимость заказчика">
+                            <input maxlength="255" name="customer_price" type="text" class="form-control" id="customer_price" placeholder="Стоимость заказчика">
                         </div>
                     </div>
                 </div>
@@ -333,13 +333,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="driver_full_name">ФИО Водителя</label>
-                            <input type="text" name="driver_full_name" class="form-control" id="driver_full_name" placeholder="ФИО Водителя">
+                            <input maxlength="255" type="text" name="driver_full_name" class="form-control" id="driver_full_name" placeholder="ФИО Водителя">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="driver_phone">Телефон водителя</label>
-                            <input name="driver_phone" type="text" class="form-control" id="driver_phone" placeholder="Телефон водителя">
+                            <input maxlength="255" name="driver_phone" type="text" class="form-control" id="driver_phone" placeholder="Телефон водителя">
                         </div>
                     </div>
                 </div>
@@ -348,13 +348,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="brand_of_machine">Марка Авто</label>
-                            <input name="brand_of_machine" type="text" class="form-control" id="brand_of_machine" placeholder="Марка Авто">
+                            <input maxlength="255" name="brand_of_machine" type="text" class="form-control" id="brand_of_machine" placeholder="Марка Авто">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="car_number">Гос.номер авто</label>
-                            <input name="car_number" type="text" class="form-control" id="car_number" placeholder="Гос.номер авто">
+                            <input maxlength="255" name="car_number" type="text" class="form-control" id="car_number" placeholder="Гос.номер авто">
                         </div>
                     </div>
                 </div>

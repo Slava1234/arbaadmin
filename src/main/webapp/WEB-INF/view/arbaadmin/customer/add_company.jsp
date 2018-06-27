@@ -17,37 +17,37 @@
 
         <div class="form-group">
             <label for="company_name">Название компании</label>
-            <input name="company_name" type="text" class="form-control" id="company_name" placeholder="Название компании">
+            <input name="company_name" type="text" class="form-control" maxlength="255" id="company_name" placeholder="Название компании">
         </div>
 
         <div class="form-group">
             <label for="bin_iin">БИН/ ИИН</label>
-            <input name="bin_iin" type="text" class="form-control" id="bin_iin" placeholder="БИН/ ИИН">
+            <input name="bin_iin" type="text" class="form-control" maxlength="255" id="bin_iin" placeholder="БИН/ ИИН">
         </div>
 
         <div class="form-group">
             <label for="company_city">Город</label>
-            <input name="company_city" type="text" class="form-control" id="company_city" placeholder="Город">
+            <input name="company_city" type="text" class="form-control" maxlength="255" id="company_city" placeholder="Город">
         </div>
 
         <div class="form-group">
             <label for="company_address">Адрес</label>
-            <input name="company_address" type="text" class="form-control" id="company_address" placeholder="Адрес">
+            <input name="company_address" type="text" class="form-control" maxlength="255" id="company_address" placeholder="Адрес">
         </div>
 
         <div class="form-group">
             <label for="contact_person">Контактное лицо</label>
-            <input name="contact_person" type="text" class="form-control" id="contact_person" placeholder="Контактное лицо">
+            <input name="contact_person" type="text" class="form-control" maxlength="255" id="contact_person" placeholder="Контактное лицо">
         </div>
 
         <div class="form-group">
             <label for="phone">Телефон</label>
-            <input name="phone" type="text" class="form-control" id="phone" placeholder="Телефон">
+            <input name="phone" type="text" class="form-control" id="phone" maxlength="255" placeholder="Телефон">
         </div>
 
         <div class="form-group">
             <label for="site">Сайт</label>
-            <input name="site" type="text" class="form-control" id="site" placeholder="Сайт">
+            <input name="site" type="text" class="form-control" id="site" maxlength="255" placeholder="Сайт">
         </div>
 
 

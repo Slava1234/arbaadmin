@@ -9,8 +9,8 @@ $(function () {
      *  *****************************************
      */
 
-    //var serverAddress = "https://lotmaster.kz:8181/arbaadmin/";
-    var serverAddress = "http://localhost:8080/arbaadmin/";
+    var serverAddress = "https://lotmaster.kz:8181/arbaadmin/";
+    //var serverAddress = "http://localhost:8080/arbaadmin/";
 
     // view company info
 
