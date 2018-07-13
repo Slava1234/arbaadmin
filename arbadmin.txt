@@ -90,17 +90,11 @@ role varchar(255)
 
 
 
-carrier
-login: arba
+login
+login: arba1
 pass: arba778
 
-customer
-login: arba
-pass: arba221
 
-
-// todo
-test
 
 
 

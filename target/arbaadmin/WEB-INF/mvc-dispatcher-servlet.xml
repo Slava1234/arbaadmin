@@ -126,9 +126,9 @@
         <mvc:interceptor>
             <mvc:mapping path="/carrier/**" />
             <mvc:mapping path="/customer/**" />
+            <mvc:mapping path="/select" />
             <mvc:exclude-mapping path="/auth"/>
             <mvc:exclude-mapping path="/check-auth"/>
-            <mvc:exclude-mapping path="/t"/>
             <mvc:exclude-mapping path="/logout"/>
             <bean class="ru.arbaadmin.interceptors.AuthInterceptor" />
         </mvc:interceptor>

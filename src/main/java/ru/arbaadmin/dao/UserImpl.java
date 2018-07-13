@@ -8,6 +8,7 @@ import ru.arbaadmin.model.User;
 import ru.arbaadmin.model.carrier.CarrierCompany;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 @Repository
 public class UserImpl implements UserDao {
@@ -60,10 +61,16 @@ public class UserImpl implements UserDao {
         Session session = this.sessionFactory.getCurrentSession();
 
         User user1 = (User)session.createCriteria(User.class)
-                .add(Restrictions.eq("login", login))
-                .add(Restrictions.eq("password", password)).uniqueResult();
+                .add(Restrictions.eq("login", login)).uniqueResult();
+                //.add(Restrictions.eq("password", password)).uniqueResult();
 
-        return user1;
+        if(user1 != null) {
+            if(user1.getPassword().equals(password))
+                return user1;
+        }
+
+
+        return null;
     }
 
 

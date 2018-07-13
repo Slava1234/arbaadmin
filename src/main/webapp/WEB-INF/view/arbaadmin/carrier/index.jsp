@@ -146,7 +146,9 @@
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.es6.min.js"></script>
+<script src="<c:url value="/resources/js/script.js" />"></script>
 <script src="<c:url value="/resources/js/carrier/script.js" />"></script>
+
 
 
 <script>
@@ -191,6 +193,17 @@
     $(document).ready(function () {
 
     });
+
+    var serverAddress = "https://lotmaster.kz:8181/arbaadmin/";
+    //var serverAddress = "http://localhost:8080/arbaadmin/";
+
+    // swich to select url
+    $("#swich-btn").click(function() {
+        location = serverAddress+"select";
+    });
+
+
+
 
 
 </script>

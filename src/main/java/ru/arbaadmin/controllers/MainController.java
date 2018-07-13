@@ -40,36 +40,13 @@ public class MainController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index() {
-        return "arbaadmin/welcome";
-    }
-
-    @RequestMapping(value = "/auth", method = RequestMethod.GET)
-    public String carrierAuth() {
         return "arbaadmin/auth";
     }
 
-
-
-
-
-    @RequestMapping(value = "/t", method = RequestMethod.GET)
-    @ResponseBody
-    public String t(HttpServletRequest request) {
-
-        String c = f1+"arba778".hashCode()+f2;
-
-        return c;
-
-
-        /*if(c.equals("111-7492835448164"))
-            return "treu";
-        else {
-            return "false";
-        }*/
-
+    @RequestMapping(value = "/select", method = RequestMethod.GET)
+    public String carrierAuth() {
+        return "arbaadmin/welcome";
     }
-
-
 
 
     @RequestMapping(value = "/check-auth", method = RequestMethod.POST)
@@ -83,9 +60,9 @@ public class MainController {
         if (user != null)
             session.setAttribute("user", user);
         else
-            return "redirect:/auth";
+            return "redirect:/";
 
-        return "redirect:/" + user.getRole().toLowerCase() + "/main";
+        return "redirect:/select";
 
     }
 

@@ -19,7 +19,7 @@
 <div class="container col-md-12">
 
 
-    <form action="check-auth" class="col-md-3 col-md-offset-4" style="margin-top: 100px" method="POST">
+    <form action="${pageContext.request.contextPath}/check-auth" class="col-md-3 col-md-offset-4" style="margin-top: 100px" method="POST">
         <label for="login">Логин</label>
         <input class="form-control" type="text" id="login" name="login" placeholder="Логин">
 
